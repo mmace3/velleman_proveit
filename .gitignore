@@ -1,0 +1,11 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+Literature/
+*.aux
+*.log
+*.synctex.gz
+*.gz
+*.dvi
+

@@ -1,0 +1,294 @@
+\documentclass{article}
+
+%\documentclass{scrartcl}
+%\usepackage{changepage}
+%\usepackage{scrextend}
+
+
+\usepackage{scrextend} % for \begin{addmargin}[0.55cm]{0cm} text \end{margin}
+
+\usepackage{mathrsfs} % for \mathscr{P}
+
+\usepackage{amssymb} % empty set symbol
+
+\newcommand{\n}{ \noindent }
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\G}{\mathcal{G}}
+%\newcommand{\pwset}{\mathcal{P}}
+\newcommand{\pwset}{\mathscr{P}}
+
+%\DeclareFontFamily{U}{MnSymbolC}{}
+%\DeclareSymbolFont{MnSyC}{U}{MnSymbolC}{m}{n}
+%\DeclareFontShape{U}{MnSymbolC}{m}{n}{
+%  <-6>    MnSymbolC5
+%  <6-7>   MnSymbolC6
+%  <7-8>   MnSymbolC7
+%  <8-9>   MnSymbolC8
+%  <9-10>  MnSymbolC9
+%  <10-12> MnSymbolC10
+%  <12->   MnSymbolC12%
+%}{}
+%\DeclareMathSymbol{\powerset}{\mathord}{MnSyC}{180}
+
+\begin{document}
+\section{Exercise 3.3.12}
+\n Suppose $\F$ and $\G$ are families of sets. Prove that if $\F \subseteq \G$ then 
+$\cup \F \subseteq \cup \G$. \\
+
+\n So we want to prove that 
+$\F \subseteq \G \rightarrow \cup \F \subseteq \cup \G$ \\
+
+\n First we assume the antecedent and make the consequent our goal to prove.
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$\F \subseteq \G$ & $\cup \F \subseteq \cup \G$   \\ \hline
+
+\end{tabular}
+\end{table}
+
+\n Suppose $\F \subseteq \G$ \\
+\indent [proof of $\cup \F \subseteq \cup \G$ ] \\
+\n So if $\F \subseteq \G \rightarrow \cup \F \subseteq \cup \G$ \\
+
+
+\n $\cup \F \subseteq \cup \G \rightarrow \forall b (b \in \cup \F \rightarrow b \in \cup \G)$ so we assume $b$ is an arbitrary element of $\cup \F$ and assume the antecedent and make the consequent our goal to prove. \\
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$\F \subseteq \G$ & $b \in \cup \G$   \\
+$b \in \cup \F$ & \\ \hline
+\end{tabular}
+\end{table}
+
+\n Suppose $\F \subseteq \G$ \\
+\indent Let $b$ be an arbitrary element of $\cup \F$  \\
+\indent \indent [proof of $b \in \cup \G$ ] \\
+\indent Therefore if $b \in \cup \F \rightarrow b \in \cup \G$ \\
+\n Since $b$ was arbitrary we can conclude $\forall b (b \in \cup \F \rightarrow b \in \cup \G)$. So if $\F \subseteq \G \rightarrow \cup \F \subseteq \cup \G$ \\
+
+\n $b \in \cup \F \rightarrow \exists M (M \in \F \wedge b \in M)$, so let $M = A_{0}$ (Existential Instantiation)
+
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$\F \subseteq \G$ & $b \in \cup \G$   \\
+$A_{0} \in \F \wedge b \in A_{0}$ & \\ \hline
+\end{tabular}
+\end{table}
+
+\n Suppose $\F \subseteq \G$
+\begin{addmargin}[0.55cm]{0cm}
+\n Let $b$ be an arbitrary element and suppose $b \in \cup \F$, which implies there is a set in $\F$ and $b$ is in that set. Let that set = $A_{0}$
+\end{addmargin}
+
+\indent \indent [proof of $b \in \cup \G$ ] \\
+\indent Therefore if $b \in \cup \F \rightarrow b \in \cup \G$ \\
+\n Since $b$ was arbitrary we can conclude $\forall b (b \in \cup \F \rightarrow b \in \cup \G)$. So if $\F \subseteq \G \rightarrow \cup \F \subseteq \cup \G$ \\
+
+\n $\F \subseteq \G \rightarrow \forall A(A \in \F \rightarrow A \in \G)$. Using universal instantiation we will plug in $A_{0}$ for $A$ since then we can use modens ponens to conclude that $A_{0} \in \G$.
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$A_{0} \in \F \rightarrow A_{0} \in \G$ & $b \in \cup \G$  \\
+$A_{0} \in \F \wedge b \in A_{0}$ & \\ \hline
+\end{tabular}
+\end{table}
+
+\n Our goal $b \in \cup \G \rightarrow \exists N (N \in \G \wedge b \in N)$, which we can now prove. Since $A_{0} \in \F$ and $\F$ is a subset of $\G$, it follows that $A_{0} \in G$. By the definition of $\cup \G$ it follows that $b \in \cup \G$ because $A_{0} \in G \wedge b \in A_{0}$, the latter statement being one of our givens. \\
+
+
+\n \textbf{Theorem.} \textit{Suppose $\F$ and $\G$ are families of sets. If $\F \subseteq \G$ then 
+$\cup \F \subseteq \cup \G$.}
+
+\n \textit{Proof.} Suppose $\F \subseteq \G$. Let $b$ be an arbitrary element of $\cup \F$, which implies there is a set in $\mathcal{F}$ that contains $b$. Call this set $A_{0}$. Since $A_{0} \in \F$ and $\F$ is a subset of $\G$ it follows that $A_{0} \in G$, which implies that $b \in \cup \G$. Therefore if $b \in \cup \F$ then $b \in \cup \G$. Since $b$ was arbitrary we can conclude that if $\F \subseteq \G$ then $\cup \F \subseteq \cup \G$. This completes the proof.
+
+
+\section{Exercise 3.3.13}
+\n Suppose $\F$ and $\G$ are families of sets. Prove that if $\F \subseteq \G$ then 
+$\cap \G \subseteq \cap \F$. \\
+
+\n So we want to prove that 
+$\F \subseteq \G \rightarrow \cap \G \subseteq \cap \F$ \\
+
+\n First we assume the antecedent and make the consequent our goal to prove.
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$\F \subseteq \G$ & $\cap \G \subseteq \cap \F$   \\ \hline
+\end{tabular}
+\end{table}
+
+\n Suppose $\F \subseteq \G$ \\
+\indent [proof of $\cap \G \subseteq \cap \F$ ] \\
+\n So if $\F \subseteq \G \rightarrow \cap \G \subseteq \cap \F$ \\
+
+\n $\cap \G \subseteq \cap \F \rightarrow \forall b ( b \in \cap \G \rightarrow b \in \cap \F)$, so we assume $b$ is an arbitrary element of $\cap \G$ and assume the antecedent and make the consequent our goal to prove. \\
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$\F \subseteq \G$ & $b \in \cap \F$   \\
+$b \in \cap \G$ & \\ \hline
+\end{tabular}
+\end{table}
+
+\n Suppose $\F \subseteq \G$ \\
+\indent Let $b$ be an arbitrary element of $\cap \G$  \\
+\indent \indent [proof of $b \in \cap \F$ ] \\
+\indent Therefore if $b \in \cap \G \rightarrow b \in \cap \F$ \\
+\n Since $b$ was arbitrary we can conclude $\forall b (b \in \cap \G \rightarrow b \in \cap \F)$. So $\F \subseteq \G \rightarrow \cap \G \subseteq \cap \F$ \\
+
+
+\n $b \in \cap \F \rightarrow \forall A (A \in \F \rightarrow b \in A)$, so we assume $A$ is an arbitrary element of $\F$ and assume the antecedent and make the consequent our goal to prove. \\
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$\F \subseteq \G$ & $b \in A$   \\
+$b \in \cap \G$ & \\
+$A \in \F$ & \\ \hline
+\end{tabular}
+\end{table}
+
+\n Suppose $\F \subseteq \G$
+
+\begin{addmargin}[0.55cm]{0cm}
+\indent Let $b$ be an arbitrary element of $\cap \G$
+\end{addmargin}
+
+\indent \indent Suppose $A$ is an arbitrary set in $\F$ \\
+\indent \indent \indent [proof of $b \in A$ ] \\
+\indent \indent Therefore if $A \in \F \rightarrow b \in A $ \\
+\indent \indent Since A was arbitrary we can conclude $b \in \cap \F$ \\
+\indent Therefore if $b \in \cap \G \rightarrow b \in \cap \F$ \\
+\n Since $b$ was arbitrary we can conclude $\forall b (b \in \cap \G \rightarrow b \in \cap \F)$. So $\F \subseteq \G \rightarrow \cap \G \subseteq \cap \F$ \\
+
+
+\n Now looking at our givens, $\F \subseteq \G \rightarrow \forall Z ( Z \in \F \rightarrow Z \in \G)$. Using universal instantiation we will plug in $A$ for $Z$ and using modus ponens we can conclude that $A \in \G$. \\
+
+\n Our other given, $b \in \cap \G \rightarrow \forall Y (Y \in \G \rightarrow b \in Y)$. Using universal instantiation we will plug in $A$ for $Y$ and using modus ponens we can conclude that $b \in A$, which was our goal, and we can now write our proof. \\
+
+
+\n \textbf{Theorem.} \textit{Suppose $\F$ and $\G$ are families of sets. If $\F \subseteq \G$ then 
+$\cap \G \subseteq \cap \F$.}
+\n \textit{Proof.} Suppose $\F \subseteq \G$. Let $b$ be an arbitrary element of $\cap \G$. Suppose $A$ is an arbitrary element of $\F$, then because $\F \subseteq \G$ then it follows that $A \in \G$. By the definition of $\cap \G$ it follows that $b \in A$ and since $A$ was arbitrary then $b \in \cap \F$. Since $b$ was arbitrary we can conclude $\cap \G \subseteq \cap \F$ and therefore that if $\F \subseteq \G$ then $\cap \G \subseteq \cap \F$. This completes the proof.
+
+
+
+\section{Exercise 3.3.14}
+% Potential answer I came across, haven't looked at it yet.
+% https://math.stackexchange.com/questions/220572/the-union-of-powersets-is-contained-in-the-powerset-of-union
+
+Suppose $\{ A_{i} | i \in I \} $ is an indexed family of sets. Prove that $\bigcup_{i \in I} \pwset(A_{i}) \subseteq \pwset (\bigcup_{i \in I} A_{i})$. \\
+
+\n So we want to prove that $\forall a (a \in \bigcup_{i \in I} \pwset(A_{i}) \rightarrow a \in \pwset(\bigcup_{i \in I} A_i))$ \\
+
+\n First we assume $a$ is arbitrary and make the antecedent a given and the consequent our goal to prove. \\
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$a \in \bigcup_{i \in I} \pwset(A_{i})$ & $a \in \pwset(\bigcup_{i \in I} A_i)$   \\ \hline
+\end{tabular}
+\end{table}
+
+
+\n Assume $a$ is an arbitrary element of $\bigcup_{i \in I} \pwset(A_{i})$ \\
+\indent Suppose $a \in \bigcup_{i \in I} \pwset(A_{i})$ \\
+\indent \indent [ proof of $a \in \pwset(\bigcup_{i \in I} A_i)$ ] \\
+\indent Therefore if $a \in \bigcup_{i \in I} \pwset(A_{i}) \rightarrow a \in \pwset(\bigcup_{i \in I} A_i)$ \\
+\n Since $a$ was arbitrary we can conclude $\bigcup_{i \in I} \pwset(A_{i}) \subseteq \pwset (\bigcup_{i \in I} A_{i})$ \\
+
+\n Looking at our goal we see that $a \in \pwset(\bigcup_{i \in I} A_i) \rightarrow a \subseteq \bigcup_{i \in I} A_i \rightarrow \forall z (z \in a \rightarrow z \in \bigcup_{i \in I} A_i ) $. Therefore we assume $z$ is arbitrary, assume the antecedent, and make the consequent our goal to prove. \\
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$a \in \bigcup_{i \in I} \pwset(A_{i})$ & $z \in \bigcup_{i \in I} A_i $   \\
+$z \in a$ & \\ \hline
+
+\end{tabular}
+\end{table}
+
+\n Assume $a$ is an arbitrary element of $\bigcup_{i \in I} \pwset(A_{i})$ \\
+\indent Suppose $a \in \bigcup_{i \in I} \pwset(A_{i})$ \\
+\indent \indent Assume z is arbitrary \\
+\indent \indent \indent Assume $z \in a$ \\
+\indent \indent \indent \indent [ proof of $z \in \bigcup_{i \in I} A_i $ ] \\
+\indent \indent \indent Therefore $z \in a \rightarrow z \in \bigcup_{i \in I} A_i $ \\
+\indent \indent Since z was arbitrary we can conclude $a \in \pwset(\bigcup_{i \in I} A_i)$ \\
+\indent Therefore if $a \in \bigcup_{i \in I} \pwset(A_{i}) \rightarrow a \in \pwset(\bigcup_{i \in I} A_i)$ \\
+\n Since $a$ was arbitrary we can conclude $\bigcup_{i \in I} \pwset(A_{i}) \subseteq \pwset (\bigcup_{i \in I} A_{i})$ \\
+
+\n Looking at our given we see that $a \in \bigcup_{i \in I} \pwset(A_{i}) \rightarrow a \in \{ a | \exists i \in I (a \in \pwset(A_i)) \}$. Using existential instantiation we will select an $i$ such that $a \in \pwset(A_i)$ which implies $a \subseteq A_i$. Since $a \subseteq A_i \rightarrow \forall m(m \in a \rightarrow m \in A_i)$ and using universal instantiation we will plug in $z$ for $m$ and we get $\forall z(z \in a \rightarrow z \in A_i)$ and using modus ponens we can conclude that $z \in A_i$, which implies that $z \in \bigcup_{i \in I} A_i $, which was our goal. We can now right our proof. \\
+
+
+\n \textbf{Theorem.} \textit{Suppose $\{ A_{i} | i \in I \} $ is an indexed family of sets, then $\bigcup_{i \in I} \pwset(A_{i}) \subseteq \pwset (\bigcup_{i \in I} A_{i})$.} \\
+\n \textit{Proof.} Suppose that $a$ is an arbitrary element of $\bigcup_{i \in I} \pwset(A_{i})$. We choose an $i \in I$ such that $a \in \pwset(A_i)$, which implies that $a \subseteq A_i$. Suppose $z$ is an arbitrary element of $a$, then it follows that $z \in A_i$ and therefore $z \in \bigcup_{i \in I} A_i$. Since $z$ was an arbitrary element of $a$ then $a \subseteq \bigcup_{i \in I} A_i$, and it follows that $a \in \pwset(\bigcup_{i \in I} A_i)$. Thus we can conclude $\bigcup_{i \in I} \pwset(A_{i}) \subseteq \pwset (\bigcup_{i \in I} A_{i})$. This completes the proof.
+
+
+\section{3.3.15}
+Suppose $ \{ A_i | i \in I \}$ is an indexed family of sets and $ I \neq \varnothing$. Prove that $\bigcap_{i \in I} A_i \in \bigcap_{i \in I} \pwset(A_i)$ \\
+
+\n So we want to prove that $\forall y (y \in \bigcap_{i \in I} A_i \rightarrow y \in \bigcap_{i \in I} \pwset(A_i))$. \\
+
+\n First we assume $y$ is arbitrary and make the antecedent a given and the consequent our goal to prove. \\
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$y \in \bigcap_{i \in I} A_i$ & $y \in \bigcap_{i \in I} \pwset(A_i)$   \\ \hline
+\end{tabular}
+\end{table}
+
+\n Suppose $y$ is arbitrary element of $\bigcap_{i \in I} A_i$. \\
+\indent [proof of $y \in \bigcap_{i \in I} \pwset(A_i)$] \\
+\n Since y was arbitrary we can conclude $\forall y (y \in \bigcap_{i \in I} A_i \rightarrow y \in \bigcap_{i \in I} \pwset(A_i))$. \\
+
+\n Our goal $y \in \bigcap_{i \in I} \pwset(A_i)$ so we make $m$ an arbitrary element of $I$ and therefore $y \in \pwset(A_m) \rightarrow y \subseteq A_m \rightarrow \forall z (z \in y \rightarrow z \in A_m)$. So we make $z$ arbitrary and make the antecedent a given and the consequent our goal to prove. \\
+
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$y \in \bigcap_{i \in I} A_i$ & $z \in A_m$   \\
+$z \in y$ & \\ \hline
+\end{tabular}
+\end{table}
+
+\n Suppose $y$ is arbitrary element of $\bigcap_{i \in I} A_i$.
+
+\begin{addmargin}[0.55cm]{0cm}
+Suppose $m$ is an arbitrary element of $I$ and therefore $y \in \pwset(A_m) \rightarrow y \subseteq A_m \rightarrow \forall z (z \in y \rightarrow z \in A_m)$.
+\end{addmargin}
+
+\indent \indent Suppose $z$ is an arbitrary element of $y$ \\
+\indent \indent \indent [proof of $z \in A_m$] 
+\begin{addmargin}[0.55cm]{0cm}
+Therefore $z \in y \rightarrow z \in A_m$ and since $z$ was arbitrary $y \subseteq A_m \rightarrow y \in \pwset(A_m)$ and since $m$ was arbitrary $y \in \bigcap_{i \in I} \pwset(A_i)$
+\end{addmargin}
+\n Since y was arbitrary we can conclude $\forall y (y \in \bigcap_{i \in I} A_i \rightarrow y \in \bigcap_{i \in I} \pwset(A_i))$. \\
+
+\n Now looking at our given $y \in \bigcap_{i \in I} A_i \rightarrow \forall i \in I(y \in A_i)$. Using universal instantiation we plug in $m$ for $i$ and therefore $y \in A_m$ and since $z \in y$ we can conclude $z \in A_m$, which was our goal. Now we can write our proof. \\
+
+\n \textbf{Theorem.} \textit{Suppose $ \{ A_i | i \in I \}$ is an indexed family of sets and $ I \neq \varnothing$, then $\bigcap_{i \in I} A_i \in \bigcap_{i \in I} \pwset(A_i)$.} \\
+\n \textit{Proof.} Suppose $y$ is an arbitrary element of $\bigcap_{i \in I} A_i$. Suppose $m$ is an arbitrary member of $I$ and therefore $y \subseteq A_m$ which implies $y \subseteq A_m$. Now suppose $z$ is an arbitrary element of $y$. Since $y \in \bigcap_{i \in I} A_i$ if we choose an $i$ such that $y \in \bigcap_{m \in I} A_m$ then $y \in A_m$ which implies $z \in A_m$. Therefore if $z \in y$ then $z \in A_m$ and since $z$ was arbitrary then $y \subseteq A_m$ or $y \in \pwset(A_m)$ and since $m$ was arbitrary then $y \in \bigcap_{i \in I} \pwset(A_i)$. Since $y$ was arbitrary then $\bigcap_{i \in I} A_i \in \bigcap_{i \in I} \pwset(A_i)$. This completes the proof.
+
+\end{document}
