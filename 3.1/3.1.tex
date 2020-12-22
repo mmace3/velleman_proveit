@@ -194,4 +194,34 @@ We will prove the contrapositive. Suppose $x = 8$. Then evaluating the equation 
 \end{proof}
 
 
+\section*{Exercise 3.1.11}
+Suppose $a$, $b$, $c$, and $d$ are real numbers, $0<a<b$, and $d>0$. Prove that if $ac \geq bd$ then $c>d$. \\
+
+\n So we want to prove that
+$(ac \geq bd) \rightarrow (c>d)$ \\
+
+\n The contrapositive of the goal is $\neg(c>d) \rightarrow \neg(ac \geq bd)$ or in other words $(c \leq d) \rightarrow (ac < bd)$. First we assume the antecedent and make the consequent our goal.
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$c \leq d$ & $ac < bd$   \\ \hline
+\end{tabular}
+\end{table}
+
+\n If we multiply both side of the inequality $c \leq d$ by $a$ we see that $ac \leq ad$ and multiplying both sides of the inequality $a < b$ by $d$ we see that $ad < bd$. Therefore, $ac \leq ad < bd$ and $ac < ad$, which was our goal to prove.
+
+\begin{theorem} Suppose $a$, $b$, $c$, and $d$ are real numbers, $0<a<b$ and $d>0$. If $ac \geq bd$ then $c>d$.
+\end{theorem}
+\begin{proof}
+We will prove the contrapositive. Suppose $c \leq d$. Multiplying the inequality $c \leq d$ on both sides by $a$ we have $ac \leq ad$ and multiplying the inequality $a<b$ on both sides by $d$ we have $ad < bd$. It follows that $ac \leq ad < bd$ and $ac < bd$. Therefore, if $ac \geq bd$ then $c>d$.
+\end{proof}
+
+\section*{Exercise 3.1.12}
+Suppose $x$ and $y$ are real numbers, and $3x + 2y \leq 5$. Prove that if $x>1$ then $y<1$.
+
+
+
+
 \end{document}
