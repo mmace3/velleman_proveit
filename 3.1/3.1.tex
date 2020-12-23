@@ -221,7 +221,96 @@ We will prove the contrapositive. Suppose $c \leq d$. Multiplying the inequality
 \section*{Exercise 3.1.12}
 Suppose $x$ and $y$ are real numbers, and $3x + 2y \leq 5$. Prove that if $x>1$ then $y<1$.
 
+\n So we want to prove that
+$(x>1) \rightarrow (y<1)$ \\
 
+\n First we assume the antecedent and make the consequent our goal.
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$x > 1$ & $y<1$   \\ \hline
+\end{tabular}
+\end{table}
+
+\n Rearranging the inequality $3x + 2y \leq 5$ we see that $\tfrac{5-2y}{3} > x$. Our given is $x>1$ and so we can conclude that $\tfrac{5-2y}{3} > x > 1$ and $\tfrac{5-2y}{3} > 1$. Solving the latter inequality for $y$ we have $y < 1$, which was our goal to prove.
+
+\begin{theorem} Suppose $x$ and $y$ are real numbers and $3x + 2y \leq 5$. If $x>1$ then $y<1$.
+\end{theorem}
+\begin{proof}
+Suppose $3x+2y \leq 5$, then it follows that $\tfrac{5-2y}{3} > x$. Suppose $x>1$, then $\tfrac{5-2y}{3} > x > 1$ and $\tfrac{5-2y}{3} > 1$. Then it follows that $y<1$. Therefore, if $x>1$ then $y<1$.
+\end{proof}
+
+\section*{Exercise 3.1.13}
+Suppose that $x$ and $y$ are real numbers. Prove that if $x^2 + y = -3$ and $2x - y = 2$ then $x = -1$.
+
+\n So we want to prove that 
+$(x^2 + y = -3 \land 2x - y = 2) \rightarrow (x = -1)$ \\
+
+\n First we assume the antecedent and make the consequent our goal.
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$x^2 + y = -3$ & $x = -1$   \\
+$ 2x - y = 2$ &\\ \hline
+\end{tabular}
+\end{table}
+
+\n Solving $x^2 + y = -3$ for $y$ we have $y = -3-x^2$. Substituting $y = -3-x^2$ into $x^2 + y = -3$ and solving for $x$ we can conclude that $x = -1$, which was our goal prove.
+
+\begin{theorem} Suppose $x$ and $y$ are real numbers. If $x^2 + y = -3$, and $2x - y = 2$ then $x = -1$.
+\end{theorem}
+\begin{proof}
+Suppose $x^2 + y = -3$ and $2x - y = 2$. If $x^2 + y = -3$ then it follows that $y = -3-x^2$. Substituting $y = -3-x^2$ into the equation $x^2 + y = -3$ we can conclude that $x = -1$. Therefore, if $x^2 + y = -3$ and $2x - y = 2$ then $x = -1$.
+\end{proof}
+
+\section*{Exercise 3.1.14}
+Prove the first theorem in Example 3.1.1. (Hint: You might find it useful to apply the theorem from Example 3.1.2.) \\
+
+\n The first theorem in Example 3.1.1. is: If $x>3$ and $y<2$, then $x^2 - 2y < 5$. The theorem from Example 3.1.2 states: Suppose $a$ and $b$ are real numbers. If $0<a<b$ then $a^2 < b^2$.\\
+
+\n So we want to prove that
+$(x>3 \land y<2) \rightarrow (x^2 - 2y < 5)$. \\
+
+\n First we assume the antecedent and make the consequent our goal. \\
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$x > 3$ & $x^2 - 2y > 5$ \\
+$y < 2$ &\\ \hline
+\end{tabular}
+\end{table}
+
+
+\n Since $0<3<x$ we can apply theorem 3.1.1 and conclude that $x^2 > 9$. Multiplying the inequality $y <2$ by $2$ on both sides we have $2y<4$. Then adding the two inequalities $x^2 > 9$ and $4 > 2y$ we can conclude that $4 + x^2 > 9 + 2y$ and if follows that $x^2 - 2y > 5$, which was our goal to prove.
+
+\begin{theorem} Suppose $x>3$ and $y<2$, then $x^2 - 2y < 5$.
+\end{theorem}
+\begin{proof}
+Suppose $x>3$ and $y<2$. Since $0<3<x$ we can apply theorem 3.1.1 and conclude that $x^2 > 9$. Multiplying the inequality $y <2$ by $2$ on both sides we have $2y<4$. Then adding the two inequalities $x^2 > 9$ and $4 > 2y$ we can conclude that $4 + x^2 > 9 + 2y$. Therefore, if $x>3$ and $y<2$, then $x^2 - 2y < 5$.
+\end{proof}
+
+\section*{Exercise 3.1.15}
+\subsection*{a}
+The theorem has a goal of the form $a \rightarrow b$ where $a$ is $\tfrac{2x-5}{x-4}$ and $b$ is $x = 7$. To prove the theorem we could assume $a$ and prove $b$ is true or prove the contrapositive $\lnot b \rightarrow \lnot a$ and assume $\lnot a$ and prove $\lnot b$. However the proof given here shows that $b \rightarrow a$, which does not suffice to prove the theorem.
+
+\subsection*{b}
+\begin{theorem} Suppose $x$ is a real number and $x \neq 4$. If $\tfrac{2x-5}{x-4} = 3$, then $x=7$.
+\end{theorem}
+\begin{proof}
+Suppose $\tfrac{2x-5}{x-4} = 3$, then if follows that $x=7$. Therefore if $\tfrac{2x-5}{x-4} = 3$, then $x = 7$.
+\end{proof}
+
+\section*{3.1.16}
+\subsection*{a}
+The mistake is assuming that since $x \neq 3$ then $x^2 \neq 9$, which is not true because if $x = -3$ then $x^2 = 9$.
+\subsection*{b}
+If $x = -3$ then $-3^2y=9y$ then $9y=9y$ and $y = 1$.
 
 
 \end{document}
