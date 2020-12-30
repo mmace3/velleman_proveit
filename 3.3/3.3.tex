@@ -4,12 +4,11 @@
 %\usepackage{changepage}
 %\usepackage{scrextend}
 
-
+\usepackage{amssymb,amsmath,amsthm}
+% amssymb has empty set symbo
 \usepackage{scrextend} % for \begin{addmargin}[0.55cm]{0cm} text \end{margin}
 
 \usepackage{mathrsfs} % for \mathscr{P}
-
-\usepackage{amssymb} % empty set symbol
 
 \newcommand{\n}{ \noindent }
 \newcommand{\F}{\mathcal{F}}
@@ -18,6 +17,7 @@
 \newcommand{\pwset}{\mathscr{P}}
 
 
+\newtheorem*{theorem}{Theorem}  % This enables \begin{theorem}
 
 %\DeclareFontFamily{U}{MnSymbolC}{}
 %\DeclareSymbolFont{MnSyC}{U}{MnSymbolC}{m}{n}
@@ -33,7 +33,118 @@
 %\DeclareMathSymbol{\powerset}{\mathord}{MnSyC}{180}
 
 \begin{document}
-\section{Exercise 3.3.12}
+
+\section*{Exercise 3.3.4}
+\n Suppose $A \subseteq \pwset(A)$. Prove that $\pwset(A) \subseteq \pwset(\pwset(A))$. \\
+
+
+\n So we want to prove that
+$\forall x(x \in \pwset(A) \rightarrow x \in \pwset(\pwset(A)))$.\\
+
+\n First we assume $x$ is arbitrary and make the antecedent a given and the consequent our goal to prove. \\
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$A \subseteq \pwset(A)$ & $x \in \pwset(\pwset(A))$  \\ 
+$x \in \pwset(A)$ & \\ \hline
+\end{tabular}
+\end{table}
+
+\n Assume $x$ is an arbitrary element of $\pwset(A)$ \\
+\indent Suppose $x \in \pwset(A)$ \\
+\indent \indent [ proof of $x \in \pwset(\pwset(A))$ ] \\
+\indent Therefore if $x \in \pwset(A) \rightarrow x \in \pwset(\pwset(A))$ \\
+\n Since $x$ was arbitrary we can conclude $\forall x(x \in \pwset(A) \rightarrow x \in \pwset(\pwset(A)))$ \\
+
+\n We can rewrite our goal as $x \subseteq \pwset(A)$ or $\forall y(y \in x \rightarrow y \in \pwset(A))$. So we assume $y$ is arbitrary and make the antecedent a given and the consequent our goal to prove.
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$A \subseteq \pwset(A)$ & $y \in \pwset(A)$  \\ 
+$x \in \pwset(A)$ & \\ 
+$y \in x$ & \\ \hline
+\end{tabular}
+\end{table}
+
+\n Assume $x$ is an arbitrary element of $\pwset(A)$ \\
+\indent Suppose $x \in \pwset(A)$ \\
+\indent \indent Suppose $y$ is an arbitrary element of $x$. \\
+\indent \indent \indent Suppose $y \in x$. \\
+\indent \indent \indent \indent[ proof of $y \in \pwset(A)$ ] \\
+\indent \indent \indent Therefore if $y \in x \rightarrow y \in \pwset(A)$.\\
+\indent \indent Since $y$ was arbitrary we can conclude that $x \subseteq \pwset(A)$. \\
+\indent Therefore if $x \in \pwset(A) \rightarrow x \in \pwset(\pwset(A))$ \\
+\n Since $x$ was arbitrary we can conclude $\forall x(x \in \pwset(A) \rightarrow x \in \pwset(\pwset(A)))$ \\
+
+\n Now looking at our givens $x \in \pwset(A)$ means that $x \subseteq A$ or $\forall z(z \in x \rightarrow z \in A)$. Using universal instantiation we will plug in $y$ for $z$ and using modus ponens we can conclude that $y \in A$. \\
+
+\n Now looking at our other given $A \subseteq \pwset(A) \rightarrow \forall m(m \in A \rightarrow m \in \pwset(A))$. Using universal instantiation we will plug in $y$ for $m$ and using modus ponens we can conclude that $y \in \pwset(A)$, which was our goal to prove.
+
+\begin{theorem} Suppose $A \subseteq \pwset(A)$. Then $\pwset(A) \subseteq \pwset(\pwset(A))$.
+\end{theorem}
+\begin{proof}
+Suppose $x$ is an arbitrary element of $\pwset(A)$ and $y$ is an arbitrary element of $x$. It follows that $y \in A$. But since $A \subseteq \pwset(A)$ then it also follows that $y \in \pwset(A)$. So $y \in x \rightarrow y \in \pwset(A)$ and since $y$ was arbitrary we can conclude that $x \subseteq \pwset(A)$. Therefore, if $x \in \pwset(A) \rightarrow x \in \pwset(\pwset(A))$. Since $x$ was arbitrary we can also conclude that $\pwset(A) \subseteq \pwset(\pwset(A))$.
+\end{proof}
+
+\n Alternate proof (not sure if this is correct)
+
+\begin{proof}
+Suppose $x$ is an arbitrary element of $\pwset(A)$. Then $x \in A$. Since $A \subseteq \pwset(A)$ and $x \in A$ then $x \subseteq \pwset(A)$. Therefore, $x \in \pwset(\pwset(A))$.
+\end{proof}
+
+\section*{Exercise 3.3.5}
+\n The hypothesis of the theorem proven in exercise 3.3.4 is $A \subseteq \pwset(A)$.
+\subsection*{A}
+\n Can you think of a set $A$ for which this hypothesis is true? \\
+
+\n The empty set $\varnothing$ is a set for which the hypothesis is true. \\
+
+\n $A \subseteq \pwset(A)$ means $x \in A \rightarrow x \in \pwset(A)$. For $\varnothing$ this would mean that $x \in \varnothing \rightarrow x \in \pwset(\varnothing)$, but by definition there are no elements in $\varnothing$. Therefore $x \in \varnothing$ will always be false and the conditional statement $x \in \varnothing \rightarrow x \in \pwset(\varnothing)$ is always true. Therefore if $\varnothing = A$ then $A \subseteq \pwset(A)$. 
+
+\subsection*{B}
+\n Can you think of another? \\
+
+\n In exercise 3.3.4 we proved that if $A \subseteq \pwset(A)$ then $\pwset(A) \subseteq \pwset(\pwset(A))$. Therefore, the set $\{\varnothing, \{\varnothing\}\}$, which is the $\pwset(A)$ if $A = \varnothing$, is another set for which the hypothesis is true. If we let $B = \pwset(A) = \{\varnothing, \{\varnothing\}\}$ and replace $A$ in the hypothesis $A \subseteq \pwset(A)$ with $B$, then we can conclude that $B \subseteq \pwset(B)$.
+
+\section*{3.3.6}
+Suppose $x$ is a real number.
+\subsection*{A}
+Prove that if $x \neq 1$ then there is a real number $y$ such that $\tfrac{y+1}{y-2} = x$. \\
+
+So we want to prove that $(x \neq 1) \rightarrow \exists y \left( \tfrac{y+1}{y+2} = x \right)$ \\
+
+We assume the antecedent and make the consequent our goal to prove. \\
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$x \neq 1$ & $\exists y \left( \tfrac{y+1}{y+2} = x \right)$   \\ \hline
+\end{tabular}
+\end{table}
+
+\n To prove our goal we need to find  a $y$ that makes the equation $ \tfrac{y+1}{y+2} = x $ true. So let's try solving the equation for $y$.
+
+\begin{align*}
+\frac{y+1}{y+2} &= x \\
+y+1 &= x(y-2) \\
+y+1 &= xy - 2x \\
+2x+1 &= xy-y \\
+2x+1 &= y(x-1) \\
+y &= \frac{2x+1}{x-1}
+\end{align*}
+
+We see that this $y$ works because we have $x \neq 1$ as a given.
+
+\begin{theorem} Suppose $x \neq 1$. Then there is a real number $y$ such that $\tfrac{y+1}{y-2} = x$.
+\end{theorem}
+
+
+\section*{Exercise 3.3.12}
 \n Suppose $\F$ and $\G$ are families of sets. Prove that if $\F \subseteq \G$ then 
 $\cup \F \subseteq \cup \G$. \\
 
@@ -114,7 +225,7 @@ $\cup \F \subseteq \cup \G$.}
 \n \textit{Proof.} Suppose $\F \subseteq \G$. Let $b$ be an arbitrary element of $\cup \F$, which implies there is a set in $\mathcal{F}$ that contains $b$. Call this set $A_{0}$. Since $A_{0} \in \F$ and $\F$ is a subset of $\G$ it follows that $A_{0} \in G$, which implies that $b \in \cup \G$. Therefore if $b \in \cup \F$ then $b \in \cup \G$. Since $b$ was arbitrary we can conclude that if $\F \subseteq \G$ then $\cup \F \subseteq \cup \G$. This completes the proof.
 
 
-\section{Exercise 3.3.13}
+\section*{Exercise 3.3.13}
 \n Suppose $\F$ and $\G$ are families of sets. Prove that if $\F \subseteq \G$ then 
 $\cap \G \subseteq \cap \F$. \\
 
@@ -190,7 +301,7 @@ $\cap \G \subseteq \cap \F$.}
 
 
 
-\section{Exercise 3.3.14}
+\section*{Exercise 3.3.14}
 % Potential answer I came across, haven't looked at it yet.
 % https://math.stackexchange.com/questions/220572/the-union-of-powersets-is-contained-in-the-powerset-of-union
 
@@ -244,7 +355,7 @@ $z \in a$ & \\ \hline
 \n \textit{Proof.} Suppose that $a$ is an arbitrary element of $\bigcup_{i \in I} \pwset(A_{i})$. We choose an $i \in I$ such that $a \in \pwset(A_i)$, which implies that $a \subseteq A_i$. Suppose $z$ is an arbitrary element of $a$, then it follows that $z \in A_i$ and therefore $z \in \bigcup_{i \in I} A_i$. Since $z$ was an arbitrary element of $a$ then $a \subseteq \bigcup_{i \in I} A_i$, and it follows that $a \in \pwset(\bigcup_{i \in I} A_i)$. Thus we can conclude $\bigcup_{i \in I} \pwset(A_{i}) \subseteq \pwset (\bigcup_{i \in I} A_{i})$. This completes the proof.
 
 
-\section{3.3.15}
+\section*{3.3.15}
 Suppose $ \{ A_i | i \in I \}$ is an indexed family of sets and $ I \neq \varnothing$. Prove that $\bigcap_{i \in I} A_i \in \bigcap_{i \in I} \pwset(A_i)$ \\
 
 \n So we want to prove that $\forall y (y \in \bigcap_{i \in I} A_i \rightarrow y \in \bigcap_{i \in I} \pwset(A_i))$. \\
