@@ -9,6 +9,8 @@
 \usepackage{scrextend} % for \begin{addmargin}[0.55cm]{0cm} text \end{margin}
 
 \usepackage{mathrsfs} % for \mathscr{P}
+\usepackage{float}
+
 
 \newcommand{\n}{ \noindent }
 \newcommand{\F}{\mathcal{F}}
@@ -142,6 +144,44 @@ We see that this $y$ works because we have $x \neq 1$ as a given.
 
 \begin{theorem} Suppose $x \neq 1$. Then there is a real number $y$ such that $\tfrac{y+1}{y-2} = x$.
 \end{theorem}
+\begin{proof}
+Suppose $x \neq 1$ and $y = \tfrac{2x+1}{x-1}$. Then
+
+\begin{equation*}
+\frac{ \frac{2x+1}{x-1} +1 }{ \frac{2x+1}{x-1} -2} = \frac{ \frac{3x}{x-1} } { \frac{3}{x-1} } = \frac{3x}{x-1} \cdot \frac{x-1}{3} = x
+\end{equation*}
+\end{proof}
+
+\subsection*{B}
+
+\n Prove that if there is a real number $y$ such that $\tfrac{y+1}{y-2} = x$ then $x \neq 1$. \\
+
+\n So we want to prove that
+$\exists y \left(\frac{y+1}{y-1} = x \right) \rightarrow (x \neq 1)$ \\
+
+\n We assume the antecedent and make the consequent our goal to prove. \\
+
+\begin{table}[H]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$\exists y \left(\frac{y+1}{y-1} = x \right)$ & $x \neq 1$   \\ \hline
+\end{tabular}
+\end{table}
+
+
+\n Using existential instantiation we assume there is a value $y_0$ such that $ \tfrac{y+1}{y-1} = x$ is true. From part A above, we know that $\left(\frac{y+1}{y-1} = x \right) \rightarrow \left( y = \tfrac{2x+1}{x-1} \right)$ and so $y_0 = \tfrac{2x+1}{x-1}$. Since $y$ is a real number, then clearly $x \neq 1$.
+
+\begin{theorem} If $y$ is a real number and $\tfrac{y+1}{y-2} = x$ then $x \neq 1$.
+\end{theorem}
+\begin{proof}
+Suppose $y$ is a real number and $\tfrac{y+1}{y-2} = x$. It follows that $y = \tfrac{2x+1}{x-1}$ and since $y$ is real number then $x \neq 1$.
+\end{proof}
+
+\section*{Exercise 3.3.7}
+Prove for every real number $x$, if $x>2$ then there is a real number $y$ such that $y + \tfrac{1}{y} = x$.
+
+
 
 
 \section*{Exercise 3.3.12}
