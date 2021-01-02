@@ -161,7 +161,7 @@ $\exists y \left(\frac{y+1}{y-1} = x \right) \rightarrow (x \neq 1)$ \\
 
 \n We assume the antecedent and make the consequent our goal to prove. \\
 
-\begin{table}[H]
+\begin{table}[h]
 \begin{tabular}{ll}
 \hline
 Givens & Goals   \\ \hline
@@ -179,9 +179,144 @@ Suppose $y$ is a real number and $\tfrac{y+1}{y-2} = x$. It follows that $y = \t
 \end{proof}
 
 \section*{Exercise 3.3.7}
-Prove for every real number $x$, if $x>2$ then there is a real number $y$ such that $y + \tfrac{1}{y} = x$.
+Prove for every real number $x$, if $x>2$ then there is a real number $y$ such that $y + \tfrac{1}{y} = x$. \\
+
+\n So we want to prove
+$\forall x \in \mathbb{R}(x>2 \rightarrow \exists y \in \mathbb{R}(y + \tfrac{1}{y} = x))$ \\
+
+\n So we let $x$ be an arbitrary real number, then we assume the antecedent and make the consequent our goal to prove. \\
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$x$ is arbitrary real number & $\exists y (y + \tfrac{1}{y} = x)$   \\ 
+$x > 2$  & \\ \hline
+\end{tabular}
+\end{table}
+
+\n Our goal is of the form $\exists y P(y)$ where $P(y)$ is $y + \tfrac{1}{y} = x$ and our strategy suggests we try to find a $y$ for which $P(y)$ is true. We can do this by solving the equation $y + \tfrac{1}{y} = x$ for $y$. We can rewrite this equation as $y^2 - \tfrac{x}{y} + 1 = 0$ and we see this is a quadratic equation and therefore we can use the quadratic formula to solve for $y$,
 
 
+
+\begin{align*}
+y = \frac{-(-x) \pm \sqrt{(-x)^2 - 4\cdot1\cdot1}}{2 \cdot 1} = \frac{x \pm \sqrt{x^2 - 4}}{2} \text{.}
+\end{align*}
+
+\n We note that $\sqrt{x^2 - 4}$ is defined because $x>2$. We have found two solutions that satisfy our original equation, but we only need one to complete the proof. We will use $\tfrac{x + \sqrt{x^2 - 4}}{2}$.
+
+\begin{theorem} For every real number $x$, if $x>2$ then there is a real number $y$ such that $y + \tfrac{1}{y} = x$.
+\end{theorem}
+\begin{proof}
+Suppose $x$ and $y$ are real numbers, $x>2$, and $y = \tfrac{x + \sqrt{x^2 - 4}}{2}$. Then
+
+\begin{align*}
+\frac{x + \sqrt{x^2 -4}}{2} + \frac{1}{ \frac{x + \sqrt(x^2 - 4}{2}} &= \frac{x + \sqrt{x^2 - 4}}{2} + \frac{2}{x + \sqrt{x^2 - 4}} \\
+&= \frac{2x^2 + 2(x\sqrt{x^2 - 4})}{2x + 2\sqrt{x^2-4}} \\
+&= x 
+\end{align*}
+
+\end{proof}
+
+\section*{Exercise 3.3.8}
+\n Prove that if $\F$ is a family of sets and $A \in \F$, then $A \subseteq \cup \F$. \\
+
+\n So we want to prove that
+$ A \in \F \rightarrow A \subseteq \cup \F$. \\
+
+\n We assume the antecedent and make the consequent our goal to prove. \\
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$ A \in \F$  & $A \subseteq \cup \F$   \\ \hline
+\end{tabular}
+\end{table}
+
+\n Assume $A \in \F$ \\
+\indent [ proof of $A \subseteq \cup \F$ ] \\
+\n Therefore if $A \in \F$ then  $A \subseteq \cup \F$\\
+
+
+
+\n Our goal $A \subseteq \cup \F$ can be rewritten as $\forall x (x \in A \rightarrow x \in \cup \F)$. We assume $x$ is arbitrary and then assume the antecedent and make the consequent our goal to prove. \\
+
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$ A \in \F$  & $x \in \cup \F$   \\ 
+$ x \in A$ & \\ \hline
+\end{tabular}
+\end{table}
+
+\n Assume $A \in \F$ \\
+\indent Assume $x$ is arbitrary \\
+\indent \indent Assume $x \in A$ \\
+\indent \indent \indent [ proof of $x \in \cup \F$ ] \\
+\indent \indent Therefore if $x \in A$ then $x \cup \F$ \\
+\indent Since $x$ was arbitrary we can conclude that $A \subseteq \cup \F$. \\
+\n Therefore if $A \in \F$ then  $A \subseteq \cup \F$\\
+
+\n Our new goal can be rewritten as $\exists B \in \F (x \in B)$. From our givens we see that $A \in \F$ and $x \in A$, so we have found a set such that $A \in \F(x \in A)$.
+
+\begin{theorem} If $\F$ is a family of sets and $A \in \F$, then $A \subseteq \cup \F$.
+\end{theorem}
+\begin{proof}
+Assume $A \in \F$ and $x$ is an arbitrary member of $A$. Then since $x \in A$ and $A \in \F$, it follows that $x \in \cup \F$. Since $x$ was arbitrary we can conclude that $A \subseteq \cup \F$ and therefore if $A \in \F$ then $A \subseteq \cup \F$.
+\end{proof}
+
+\section*{3.3.9}
+Prove that if $\F$ is a family of sets and $A \in \F$, then $\cap \F \subseteq A$. \\
+
+\n We want to prove that
+$A \in \F \rightarrow \cap \F \subseteq A$. \\
+
+\n We assume the antecedent and make the consequent our goal to prove. \\
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$ A \in \F$  & $\cap \F \subseteq A$   \\ \hline
+\end{tabular}
+\end{table}
+
+\n Assume $A \in \F$ \\
+\indent [proof of $\cap \F \subseteq A$] \\
+\n Therefore, if $A \in \F$ then $\cap \F \subseteq A$. \\
+
+\n We can rewrite our goal as $\forall x(x \in \cap \F \rightarrow x \in A$). We assume $x$ is arbitrary and then assume the antecedent and make the consequent our goal to prove. \\
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$ A \in \F$  & $x \in A$   \\ 
+$x \in \cap \F$ & \\ \hline
+\end{tabular}
+\end{table}
+
+\n Assume $A \in \F$ \\
+\indent Assume $x$ is arbitrary \\
+\indent \indent Assume $x \in \cap \F$ \\
+\indent \indent \indent [proof of $x \in A$] \\
+\indent \indent Therefore, if $x \in \cap \F$ then $x \in A$. \\
+\indent Since $x$ was arbitrary we can conclude that $\cap \F \subseteq A$. \\
+\n Therefore, if $A \in \F$ then $\cap \F \subseteq A$. \\
+
+\n Our given $x \in \cap \F$ can be rewritten as $\forall B \in \F (x \in B)$, therefore if $A \in \F$ then $x \in A$, which was our goal to prove.
+
+\begin{theorem} If $\F$ is a family of sets and $A \in \F$, then $\cup \F \in A$.
+\end{theorem}
+\begin{proof}
+Assume $A \in \F$ and $x$ is an arbitrary member of $\cap \F$. Since $A \in \F$ and $x \in \cap \F$ it follows that $x \in A$ and therefore, if $x \in \cap \F$ then $x \in A$. Since $x$ was arbitrary we can conclude that $\cap \F \subseteq A$. Therefore, if $A \in \F$ then $\cap \F \subseteq A$.
+\end{proof}
+
+\section*{Exercise 3.3.10}
+Suppose that $\F$ is a family of sets. Prove that if $\varnothing \in \F$ then $\cap \F = \varnothing$.
 
 
 \section*{Exercise 3.3.12}
