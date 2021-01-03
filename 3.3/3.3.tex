@@ -34,6 +34,8 @@
 %}{}
 %\DeclareMathSymbol{\powerset}{\mathord}{MnSyC}{180}
 
+%\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
 \begin{document}
 
 \section*{Exercise 3.3.4}
@@ -112,7 +114,7 @@ Suppose $x$ is an arbitrary element of $\pwset(A)$. Then $x \in A$. Since $A \su
 
 \n In exercise 3.3.4 we proved that if $A \subseteq \pwset(A)$ then $\pwset(A) \subseteq \pwset(\pwset(A))$. Therefore, the set $\{\varnothing, \{\varnothing\}\}$, which is the $\pwset(A)$ if $A = \varnothing$, is another set for which the hypothesis is true. If we let $B = \pwset(A) = \{\varnothing, \{\varnothing\}\}$ and replace $A$ in the hypothesis $A \subseteq \pwset(A)$ with $B$, then we can conclude that $B \subseteq \pwset(B)$.
 
-\section*{3.3.6}
+\section*{Exercise 3.3.6}
 Suppose $x$ is a real number.
 \subsection*{A}
 Prove that if $x \neq 1$ then there is a real number $y$ such that $\tfrac{y+1}{y-2} = x$. \\
@@ -812,4 +814,186 @@ $\forall A \in \F \forall B \in \G(y \in A \rightarrow y \in B)$ & \\ \hline
 Suppose $x$ is an arbitrary member of $\cup \F$, which means there is a set in $\F$ that contains $x$. Suppose $M$ is an arbitrary set in $\G$. Then since every set in $\F$ is a subset of every set in $\G$ it follows that $x \in M$. Since $M$ was arbitrary we can conclude that $x \in \cap \G$ and therefore if $x \in \cup F$ then $x \in \cap \G$. Since $x$ was arbitrary we can conclude that $\cup \F \subseteq \cap \G$.
 \end{proof}
 
+\section*{Exercise 3.3.18}
+In this problem all variables range over $\mathbb{Z}$, the set of all integers.
+
+\subsection*{A}
+Prove that if $a | b$ and $a | c$, then $a | (b+c)$. \\
+
+\n We want to prove
+$(a|b) \land (a|c) \rightarrow a|(b+c)$ \\
+
+\n We assume the antecedent and make the consequent our goal. \\
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$a|b$ & $a|(b+c)$   \\ 
+$a|c$ & \\ \hline
+\end{tabular}
+\end{table}
+
+\n Suppose $a|b$ and $a|c$ \\
+\indent [proof of $a| (b+c)$ \\
+\n Therefore if $a|b$ and $a|c$ then $a| (b+c)$. \\
+
+\n Our goal means that $\exists x \in \mathbb{Z}(ax = (b+c))$. So we need to find an $x$ that makes this statement true. Our goals can be rewritten as $\exists y \in \mathbb{Z}(ay = b)$ and $\exists w \in \mathbb{Z}(aw = c)$. Using existential instantiation we will assume there is a $y$ and and $w$ that makes both of the previous statement true.
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$ay = b$ & $a|(b+c)$   \\ 
+$aw = c$ & \\ \hline
+\end{tabular}
+\end{table}
+
+\n Suppose $ay = b$ and $aw = c$ \\
+\indent [proof of $a| (b+c)$ \\
+\n Therefore if $a|b$ and $a|c$ then $a| (b+c)$. \\
+
+\n Adding the two inequalities $ay = b$ and $aw = c$ we have $ay + aw = b + c$ or $a(y+w) = b+c$. Since $y$ and $w$ are integers we can conclude that $a|(b+c)$, which was our goal to prove.
+
+\begin{theorem} If $a$, $b$, and $c$ are integers, $a|b$, and $a|c$, then $a|(b+c)$.
+\end{theorem}
+\begin{proof}
+Suppose $a$, $b$, and $c$ are integers, $a|b$, and $a|c$. Since $a|b$ there must be an integer $y$ such that $ay = b$. Also, since $a|c$ there must be an integer $w$ such that $aw = c$. Adding together the previous two equalities we have $ay + aw = b + c$ or $a(y+w) = b+c$. Since $y$ and $w$ are integers we can conclude that $a|(b+c)$.
+\end{proof}
+
+\subsection*{B}
+
+\n Prove that if $ac|bc$ and $c \neq 0$, then $a|b$. \\
+
+\n We want to prove
+$(ac|bc) \land (c \neq 0) \rightarrow a|b$. \\ 
+
+\n We assume the antecedent and make the consequent our goal. \\
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$ac|bc$ & $a|b$   \\ 
+$c \neq 0$ & \\ \hline
+\end{tabular}
+\end{table}
+
+\n Suppose $ac|bc$ and $c \neq 0$\\
+\indent [proof of $a|b$] \\
+\n Therefore $ac|bc$ and $c \neq 0$, then $a|b$. \\
+
+\n Our goal means that $\exists x(ax = b)$ and we want to find an $x$ that makes this statement true. Looking at our goals we can rewrite $ac|bc$ as $\exists y (acy = bc)$. Using existential instantiation we will assume there is a $y$ that makes $acy = bc$ true and we can add $acy = bc$ to our givens. Since $c \neq 0$ we can divide both sides of $acy = bc$ by $c$ and we have $ay = b$. Since $y$ is an integer we can conclude that $a|b$, which was our goal to prove.
+
+\begin{theorem} If $a$, $b$, and $c$ are integers, $ac|bc$, and $c \neq 0$, then $a|b$.
+\end{theorem}
+\begin{proof}
+Suppose $a$, $b$, and $c$ are integers, $ac|bc$, and $c \neq 0$. Since $ac|bc$ there must be an integer $x$ such that $acx = bc$. Since $c \neq 0$ we can simplify the previous equation by dividing both sides by $c$ so that $ax = b$. Since $x$ is an integer we can conclude that $a|b$.
+\end{proof}
+
+\section*{Exercise 3.3.19}
+\subsection*{A}
+Prove that for all real numbers $x$ and $y$ there is a real number $z$ such that $x + z = y - z$. \\
+
+\n We want to prove that $\forall x \in \mathbb{R} \forall y \in \mathbb{R} \exists z \in \mathbb{R}(x + z = y - z)$. \\
+
+\n We let $x$ and $y$ stand for arbitrary real numbers and make $\exists z \in \mathbb{R}(x + z = y - z)$ our goal to prove.
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$x$ arbitrary & $\exists z \in \mathbb{R}(x + z = y - z)$   \\ 
+$y$ arbitrary & \\ \hline
+\end{tabular}
+\end{table}
+
+\n Suppose $x$ and $y$ are arbitrary real numbers \\
+\indent [proof of $\exists z \in \mathbb{R}(x + z = y - z)$ ] \\
+\n Since $x$ and $y$ are arbitrary we can conclude $\forall x \in \mathbb{R} \forall y \in \mathbb{R} \exists z \in \mathbb{R}(x + z = y - z)$ \\
+
+\n We want to find a $z$ such that $x + z = y - z$, which suggests we try solving this equation for $z$
+
+\begin{align*}
+x + z &= y - z \\
+x + 2z &= y \\
+z &= \frac{y - x}{2}.
+\end{align*}
+
+\n Now we are ready to complete our proof.
+
+\begin{theorem} For all real numbers $x$ and $y$ there is a real number $z$ such that $x + z = y - z$.
+\end{theorem}
+\begin{proof}
+Suppose $x$ and $y$ are arbitrary real numbers and $z = \tfrac{y - x}{2}$. Then
+
+\begin{align*}
+x + \frac{y - x}{2} &= y - \frac{y - x}{2} \\
+\frac{2x + y - x}{2} &= \frac{2y - (y - x}{2} \\
+2x + y - x &= 2y - y + x \\
+x(2-1) + y &= y(2-1) + x\\
+x + y &= x + y
+\end{align*}
+\end{proof}
+
+\subsection*{B}
+\n Would the statement in part (A) be correct if "real number" were changed to "integer"? Justify your answer. \\
+
+\n No, because there are instances where $z = \tfrac{x - y}{2}$ would not result in an integer. For example, if $x = 5$ and $y = 2$ then $z = \tfrac{3}{2}$, which is not an integer. Therefore the statement in part (A) would not be correct.
+
+\section*{Exercise 3.3.20}
+\n Consider the following theorem: \\
+
+\begin{theorem} For every real number $x$, $x^2 \geq 0$.
+\end{theorem}
+
+\n What's wrong with the following proof?
+
+\begin{proof}
+Suppose not. Then for every real number $x$, $x^2 < 0$. In particular,
+plugging in $x = 3$ we would get $9 < 0$, which is clearly false. This
+contradiction shows that for every number $x, x^2 \geq 0$.
+\end{proof}
+
+\n The sentence "Then for every real number $x$, $x^2 < 0$" is not correct because if we let $x = 0$ then $0 < 0$ is not true.
+
+\section*{3.3.21}
+\n Consider the following incorrect theorem: \\
+
+\n \textbf{Incorrect Theorem.} \textit{If $\forall x \in A (x \neq 0)$ and $A \subseteq B$ then $\forall x \in B (x \neq 0)$.}
+
+\subsection*{A}
+\n What's wrong with the following proof? \\
+
+\begin{proof}
+Let $x$ be an arbitrary element of $A$. Since $\forall x \in A(x \neq 0)$, we can conclude that $x \neq 0$. Also, since $A \subseteq B$, $x \in B$. Since $x \in B$, $x \neq 0$, and $x$ was arbitrary, we can conclude that $\forall x \in B(x \neq 0)$.
+\end{proof}
+
+\n The last sentence is not correct. $A \subseteq B$ means that all elements in $A$ are in $B$ and since $x \neq 0$ then $0 \notin A$, but this doesn't mean that $0 \notin B$, because there can be elements in $B$ that are not in $A$.
+
+\subsection*{B}
+Find a counterexample to the theorem. In other words, find an example
+of sets $A$ and $B$ for which the hypotheses of the theorem are
+true but the conclusion is false. \\
+
+\n Let $A = \{1,2,3\}$ and $B = \{0,1,2,3\}$. Then the hypotheses of the theorem are true, specifically $\forall x \in A (x \neq 0)$ and $A \subseteq B$, but the conclusion $\forall x \in B (x \neq 0)$ is false.
+
+\section*{3.3.22}
+Consider the following incorrect theorem: \\
+
+\n \textbf{Incorrect Theorem.} $\exists x \in \mathbb{R} \forall y \in \mathbb{R} (xy^2 = y - x)$. \\
+
+\n What's wrong with the following proof of the theorem? \\
+
+\begin{proof}
+Let $x = \tfrac{y}{y^2+1}$. Then \\
+\begin{equation*}
+y - x = y - \frac{y}{y^2} = \frac{y^3}{y^2 + 1} = \frac{y}{y^2 + 1} \cdot y^2 = xy^2.
+\end{equation*}
+\end{proof}
+
+\n In the proof, $x$ is defined in terms of $y$ but $y$ has not been introduced into the proof yet. The theorem should start with "Let $x = ...$. and let $y$ be an arbitrary real number...".
+
+
 \end{document}
+
