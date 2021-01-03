@@ -268,7 +268,7 @@ $ x \in A$ & \\ \hline
 Assume $A \in \F$ and $x$ is an arbitrary member of $A$. Then since $x \in A$ and $A \in \F$, it follows that $x \in \cup \F$. Since $x$ was arbitrary we can conclude that $A \subseteq \cup \F$ and therefore if $A \in \F$ then $A \subseteq \cup \F$.
 \end{proof}
 
-\section*{3.3.9}
+\section*{Exercise 3.3.9}
 Prove that if $\F$ is a family of sets and $A \in \F$, then $\cap \F \subseteq A$. \\
 
 \n We want to prove that
@@ -316,7 +316,115 @@ Assume $A \in \F$ and $x$ is an arbitrary member of $\cap \F$. Since $A \in \F$ 
 \end{proof}
 
 \section*{Exercise 3.3.10}
+Suppose that $\F$ is a nonempty family of sets $B$ is a set, and $\forall A \in \F(B \subseteq A)$. Prove that $B \subseteq \cap \F$. \\
+
+\n We want to prove
+$\forall A \in \F(B \subseteq A) \rightarrow B \subseteq \cap \F$. \\
+
+\n We assume the antecedent and make the consequent our goal to prove. \\
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$\forall A \in \F(B \subseteq A)$  & $B \subseteq \cap \F$   \\ \hline
+\end{tabular}
+\end{table}
+
+\n Suppose $\forall A \in \F(B \subseteq A)$ \\
+\indent [proof of $B \subseteq \cap \F$] \\
+\n Therefore if $\forall A \in \F(B \subseteq A)$ then $B \subseteq \cap \F$. \\
+
+\n Our goal can be rewritten as $\forall x(x \in B \rightarrow x \in \cap \F)$. So we assume $x$ is arbitrary and then assume the antecedent and make the consequent our goal to prove. \\
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$\forall A \in \F(B \subseteq A)$  & $B \in \cap \F$   \\ 
+$x \in B$ & \\ \hline
+\end{tabular}
+\end{table}
+
+\n Suppose $\forall A \in \F(B \subseteq A)$ \\
+\indent Suppose $x$ is arbitrary. \\
+\indent \indent Suppose $x \in B$. \\
+\indent \indent \indent [proof of $x \in \cap \F$] \\
+\indent \indent Therefore $x \in B \rightarrow x \in \cap \F$ \\
+\indent Since $x$ was arbitrary we can conclude $B \subseteq \cap \F$ \\
+\n Therefore if $\forall A \in \F(B \subseteq A)$ then $B \subseteq \cap \F$. \\
+
+\n Our goal can be rewritten as $\forall M \in F(x \in M)$ and so we can assume $M$ is an arbitrary set in $\F$ and make our goal $x \in M$.\\
+
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$\forall A \in \F(B \subseteq A)$  & $x \in M$   \\ 
+$x \in B$ & \\
+$M \in \F$ & \\ \hline
+\end{tabular}
+\end{table}
+
+\n Suppose $\forall A \in \F(B \subseteq A)$ \\
+\indent Suppose $x$ is arbitrary. \\
+\indent \indent Suppose $x \in B$. \\
+\indent \indent \indent Suppose $M$ is an arbitrary set in $\F$. \\
+\indent \indent \indent \indent [proof of $x \in M$] \\
+\indent \indent \indent Therefore $x \in \cap \F$ \\
+\indent \indent Therefore $x \in B \rightarrow x \in \cap \F$ \\
+\indent Since $x$ was arbitrary we can conclude $B \subseteq \cap \F$ \\
+\n Therefore if $\forall A \in \F(B \subseteq A)$ then $B \subseteq \cap \F$. \\
+
+\n Using universal instantiation we will plug in $M$ for $A$ in our given $\forall A \in \F(B \subseteq A)$ and conclude that $B \subseteq M$. We can rewrite $B \subseteq M$ as $\forall y(y \in B \rightarrow y \in M)$ and using universal instantiation plug in $x$ for $y$ and then use moden ponens to conclude $x \in M$, which was our goal to prove.
+
+\begin{theorem} If $\F$ is a nonempty family of sets, $B$ is a set, and $\forall A \in \F(B \subseteq A)$, then $B \subseteq \cap \F$.
+\end{theorem}
+\begin{proof}
+Suppose $\forall A \in \F(B \subseteq A)$. Suppose $x$ is an arbitrary member of $B$ and $M$ is an arbitrary set in $\F$. Then it follows that $x \in M$ and since $M$ was arbitrary we can conclude that $x$ is in all sets that are in $\F$ or $x \in \cap \F$. Therefore, if $x \in B$ then $x \in \cap \F$, and since $x$ was arbitrary, we can conclude that $B \subseteq \cap \F$. 
+\end{proof}
+
+
+\section*{Exercise 3.3.11}
+
 Suppose that $\F$ is a family of sets. Prove that if $\varnothing \in \F$ then $\cap \F = \varnothing$.
+
+\n We want to prove that
+$\varnothing \in \F \rightarrow \cap \F = \varnothing$ \\
+
+\n We assume the antecedent and make the consequent our goal to prove. \\
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$\varnothing \in \F$  & $\cap \F = \varnothing$   \\ \hline
+\end{tabular}
+\end{table}
+
+\n Suppose $\varnothing \in \F$ \\
+\indent [proof of $\cap \F = \varnothing$] \\
+\n Therefore if $\varnothing \in \F$ then $\cap \F = \varnothing$. \\
+
+\n We will try a proof by contradiction. So we assume that $\cap \F \neq \varnothing$ and try to find a contradiction.
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$\varnothing \in \F$  &  contradiction \\
+$\cap \F \neq \varnothing$  & \\ \hline
+\end{tabular}
+\end{table}
+
+\n Our given $\cap \F \neq \varnothing$ means that there is an element that is in all sets in $\F$. However, this contradicts $\varnothing \in \F$ because $\varnothing$ is the set that contains nothing.
+
+\begin{theorem} If $\F$ is a family of sets and $\varnothing \in \F$, then $\cap \F = \varnothing$.
+\end{theorem}
+\begin{proof}
+We will prove by contradiction. Suppose $\varnothing \in \F$ and $\cap \F \neq \varnothing$. Since $\cap \F \neq \varnothing$ it follows that there is an element that is within all of the sets that are in $\F$. However, this contradicts $\varnothing \in \F$ because $\varnothing$ is the set that contains nothing. Therefore, if $\varnothing \in \F$ then $\cap \F = \varnothing$.
+\end{proof}
 
 
 \section*{Exercise 3.3.12}
@@ -530,7 +638,7 @@ $z \in a$ & \\ \hline
 \n \textit{Proof.} Suppose that $a$ is an arbitrary element of $\bigcup_{i \in I} \pwset(A_{i})$. We choose an $i \in I$ such that $a \in \pwset(A_i)$, which implies that $a \subseteq A_i$. Suppose $z$ is an arbitrary element of $a$, then it follows that $z \in A_i$ and therefore $z \in \bigcup_{i \in I} A_i$. Since $z$ was an arbitrary element of $a$ then $a \subseteq \bigcup_{i \in I} A_i$, and it follows that $a \in \pwset(\bigcup_{i \in I} A_i)$. Thus we can conclude $\bigcup_{i \in I} \pwset(A_{i}) \subseteq \pwset (\bigcup_{i \in I} A_{i})$. This completes the proof.
 
 
-\section*{3.3.15}
+\section*{Exercise 3.3.15}
 Suppose $ \{ A_i | i \in I \}$ is an indexed family of sets and $ I \neq \varnothing$. Prove that $\bigcap_{i \in I} A_i \in \bigcap_{i \in I} \pwset(A_i)$ \\
 
 \n So we want to prove that $\forall y (y \in \bigcap_{i \in I} A_i \rightarrow y \in \bigcap_{i \in I} \pwset(A_i))$. \\
@@ -578,5 +686,130 @@ Therefore $z \in y \rightarrow z \in A_m$ and since $z$ was arbitrary $y \subset
 
 \n \textbf{Theorem.} \textit{Suppose $ \{ A_i | i \in I \}$ is an indexed family of sets and $ I \neq \varnothing$, then $\bigcap_{i \in I} A_i \in \bigcap_{i \in I} \pwset(A_i)$.} \\
 \n \textit{Proof.} Suppose $y$ is an arbitrary element of $\bigcap_{i \in I} A_i$. Suppose $m$ is an arbitrary member of $I$ and therefore $y \subseteq A_m$ which implies $y \subseteq A_m$. Now suppose $z$ is an arbitrary element of $y$. Since $y \in \bigcap_{i \in I} A_i$ if we choose an $i$ such that $y \in \bigcap_{m \in I} A_m$ then $y \in A_m$ which implies $z \in A_m$. Therefore if $z \in y$ then $z \in A_m$ and since $z$ was arbitrary then $y \subseteq A_m$ or $y \in \pwset(A_m)$ and since $m$ was arbitrary then $y \in \bigcap_{i \in I} \pwset(A_i)$. Since $y$ was arbitrary then $\bigcap_{i \in I} A_i \in \bigcap_{i \in I} \pwset(A_i)$. This completes the proof.
+
+\section*{Exercise 3.3.16}
+Prove the converse of the statement proven in Example 3.3.5. In other words, prove that if $\F \subseteq \pwset(B)$ then $\cup \F \subseteq B$. \\
+
+\n We want to prove
+$\F \subseteq \pwset(B) \rightarrow \cup \F \subseteq B$. \\
+
+\n We assume the antecedent and make the consequent our goal to prove. \\
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$\F \subseteq \pwset(B)$ & $\cup \F \subseteq B$   \\ \hline
+\end{tabular}
+\end{table}
+
+\n Suppose $\F \subseteq \pwset(B)$ \\
+\indent [proof of $\cup \F \subseteq B$ \\
+\n Therefore if $\F \subseteq \pwset(B)$ then $\cup F \subseteq B$. \\
+
+\n $\cup F \subseteq B \rightarrow \forall x (x \in \cup \F \rightarrow x \in B)$. So we assume $x$ is arbitrary and then assume the antecedent and make the consequent our goal to prove. \\
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$\F \subseteq \pwset(B)$ & $x \in B$   \\ 
+$x \in \cup \F$ & \\ \hline
+\end{tabular}
+\end{table}
+
+\n Suppose $\F \subseteq \pwset(B)$ \\
+\indent Suppose $x$ is arbitrary \\
+\indent \indent Suppose $x \in \cup \F$ \\
+\indent \indent \indent [proof of $x \in B$] \\
+\indent \indent Therefore if $x \in \cup \F$ then $x \in B$ \\
+\indent Since $x$ was arbitrary we can conclude that $\cup \F \subseteq B$. \\
+\n Therefore if $\F \subseteq \pwset(B)$ then $\cup F \subseteq B$. \\
+
+\n $x \in \cup \F \rightarrow \exists M \in \F(x \in M)$. We use existential instantiation and assume there is a set $M$ in $\F$ and $x$ is in that set. \\
+
+\n Suppose $\F \subseteq \pwset(B)$ \\
+\indent Suppose $x$ is arbitrary \\
+\indent \indent Suppose $M$ is arbitrary set in $\F$ \\
+\indent \indent \indent $x \in M$ \\
+\indent \indent \indent \indent [proof of $x \in B$] \\
+\indent \indent \indent Since $x \in M$ and $M$ is a set in $\F$ then $x \in \cup \F$ \\
+\indent \indent Therefore if $x \in \cup \F$ then $x \in B$ \\
+\indent Since $x$ was arbitrary we can conclude that $\cup \F \subseteq B$. \\
+\n Therefore if $\F \subseteq \pwset(B)$ then $\cup F \subseteq B$. \\
+
+
+\n Our given $\F \subseteq \pwset(B)$ means that $\forall N(N \in \F \rightarrow \forall z(z \in N \rightarrow z \in B)$. We will use universal instantiation and plug in $M$ for $N$ and $x$ for $z$ and we can conclude that $x \in B$, which was our goal to prove.
+
+\begin{theorem} Suppose $B$ is a set and $\F$ is a family of sets. If $\F \subseteq \pwset(B)$ then $\cup \F \subseteq B$.
+\end{theorem}
+\begin{proof}
+Suppose $x$ is an arbitrary member of $\cup \F$, which means that $x$ is a member of a set that is in $\F$. Suppose $\F \subseteq \pwset(B)$, which means that any element that is in a set that is a member of $\F$ is also in the set $B$. It follows that since $x$ is a member of a set in $\F$ then $x \in B$. Therefore, if $x \in \cup \F$ then $x \in B$ and since $x$ was arbitrary we can conclude $\cup \F \subseteq B$. Therefore, if $\F \subseteq \pwset(B)$ then $\cup \F \subseteq B$.
+\end{proof}
+
+\section*{Exercise 3.3.17}
+\n Suppose $\F$ and $\G$ are nonempty families of sets, and every element of $\F$ is a subset of every element of $\G$. Prove that $\cup \F \subseteq \cap \G$.\\
+
+\n We want to prove that
+$\cup \F \subseteq \cap \G$. \\
+
+\n We can rewrite this goal as $\forall x(x \in \cup \F \rightarrow x \in \cap \G)$. We assume $x$ is arbitrary and then assume the antecedent and make the consequent our goal. \\
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$x \in \cup \F$ & $x \in \cap \G$   \\ 
+$\forall A \in \F \forall B \in \G(y \in A \rightarrow y \in B)$ & \\ \hline
+\end{tabular}
+\end{table}
+
+\n Suppose $x$ is arbitrary. \\
+\indent Suppose $x \in \cup \F$.\\
+\indent \indent [proof of $x \in \cap \G$] \\
+\indent Therefore if $x \in \cup \F$ then $x \in \cap \G$ \\
+\n Since $x$ was arbitrary we can conclude that $\cup \F \subseteq \cap \G$. \\
+
+\n We can rewrite our goal as $\forall M \in \G(x \in M)$. We assume $M$ is an arbitrary set in $\G$ and then our goal becomes $x \in M$.
+
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$x \in \cup \F$ & $x \in M$   \\ 
+$M \in \G$ & \\
+$\forall A \in \F \forall B \in \G(y \in A \rightarrow y \in B)$ & \\ \hline
+\end{tabular}
+\end{table}
+
+\n Suppose $x$ is arbitrary. \\
+\indent Suppose $x \in \cup \F$.\\
+\indent \indent Suppose $M$ is an arbitrary set in $\G$ \\
+\indent \indent \indent [proof of $x \in M$] \\
+\indent \indent Since $M$ was arbitrary we can conclude that $x \in \cap \G$ \\
+\indent Therefore if $x \in \cup \F$ then $x \in \cap \G$ \\
+\n Since $x$ was arbitrary we can conclude that $\cup \F \subseteq \cap \G$. \\
+
+\n We can rewrite our given $x \in \cup \F$ as $\exists N \in \F(x \in N)$. We use existential instantiation and assume there is a set $N \in \F$ and $x \in N$.
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$N \in \F$ & $x \in M$   \\
+$x \in N$ & \\ 
+$M \in \G$ & \\
+$\forall A \in \F \forall B \in \G(y \in A \rightarrow y \in B)$ & \\ \hline
+\end{tabular}
+\end{table}
+
+\n Now we can use universal instantiation to plug in $N$ for $A$ and $M$ for $B$. Then since $x \in N$ we can use modus ponens to conclude that $x \in M$, which was our goal.
+
+\begin{theorem} If $\F$ and $\G$ are nonempty families of sets, and every element of $\F$ is a subset of every element of $\G$, then $\cup \F \subseteq \cap \G$.
+\end{theorem}
+\begin{proof}
+Suppose $x$ is an arbitrary member of $\cup \F$, which means there is a set in $\F$ that contains $x$. Suppose $M$ is an arbitrary set in $\G$. Then since every set in $\F$ is a subset of every set in $\G$ it follows that $x \in M$. Since $M$ was arbitrary we can conclude that $x \in \cap \G$ and therefore if $x \in \cup F$ then $x \in \cap \G$. Since $x$ was arbitrary we can conclude that $\cup \F \subseteq \cap \G$.
+\end{proof}
 
 \end{document}
