@@ -994,6 +994,107 @@ y - x = y - \frac{y}{y^2} = \frac{y^3}{y^2 + 1} = \frac{y}{y^2 + 1} \cdot y^2 = 
 
 \n In the proof, $x$ is defined in terms of $y$ but $y$ has not been introduced into the proof yet. The theorem should start with "Let $x = ...$. and let $y$ be an arbitrary real number...".
 
+\section*{3.3.23}
+\n Consider the following incorrect theorem: \\
+
+\n \textbf{Incorrect Theorem} \textit{Suppose $\F$ and $\G$ are families of sets. If $\cup \F$ and $\cup G$ are disjoint, then so are $\F$ and $\G$.} \\
+
+\subsection*{A}
+What's wrong with the following proof of the theorem?
+
+\begin{proof}
+Suppose $\cup \F$ and $\cup G$ are disjoint. Suppose $\F$ and $\G$ are not disjoint. Then we can choose some set $A$ such that $A \in \F$ and $a \in \G$. Since $A \in \F$, by exercise 8, $A \subseteq \cup \F$, so every element of $A$ is in $\cup \F$. Similarly, since $A \in \G$, every element of $A$ is in $\cup \G$. But then every element of $A$ is in both $\cup \F$ and $\cup \G$, and this is impossible since $\cup \F$ and $\cup \G$ are disjoint. Thus, we have reached a contradiction, so $\F$ and $\G$ must be disjoint.
+\end{proof}
+
+\n The statement ``But then every element of $A$ is in both $\cup \F$ and $\cup \G$, and this is impossible since $\cup \F$ and $\cup \G$ are disjoint." is not correct. If $A = \{\varnothing\}$ then every element of $A$, which is $\varnothing$, is in both $\cup \F$ and $\cup \G$ and by definition $\cup \F$ and $\cup \G$ are disjoint, or $(\cup \F) \cap (\cup \G) = \varnothing$. So there is no contradiction in this case.
+
+\subsection*{B}
+Find a counterexample to the theorem. \\
+
+\n Let $\F = \{\{\varnothing\}, \{1\}\}$ and $G = \{\{\varnothing\}, \{2\}\}$. Then $\cup \F = \{1, \varnothing\}$ and $\cup \G = \{2, \varnothing\}$ and therefore $\cup \F$ and $\cup \G$ are disjoint, or $(\cup \F) \cap (\cup \G) = \varnothing$. However, $\F$ and $\G$ are not disjoint because $\F \cap \G = \{\varnothing\}$. (Remember, the empty set $\varnothing$ is the set that has no elements, but the set $\{\varnothing\}$ is a set that contains one element, $\varnothing$.)
+
+\section*{3.3.24}
+Consider the following putative theorem: \\
+
+\n \textbf{Theorem?} \textit{For all real numbers $x$ and $y$, $x^2 + xy - 2y^2 = 0$.} \\
+
+\subsection*{A}
+What's wrong with the following proof of the theorem? \\
+
+\begin{proof}
+Let $x$ and $y$ be equal to some arbitrary real number $r$. Then
+
+\begin{equation*}
+x^2 + xy - 2y^2 = r^2 + r \cdot r - 2r^2 = 0.
+\end{equation*}
+
+\n Since $x$ and $y$ were both arbitrary, this shows that for all real numbers $x$ and $y$, $x^2 + xy - 2y^2 = 0$. \\
+\end{proof}
+
+\n The first sentence of the proof assigns $x$ and $y$ to be the same arbitrary real number, however, it should start with ``Let $x$ be an arbitrary real number and let $y$ be an arbitrary real number" or ``let $x$ and $y$ be arbitrary real numbers". 
+
+\subsection*{B}
+No, the theorem is not correct. We will provide a counterexample. Let $x = 2$ and let $y = 3$, then
+
+\begin{equation*}
+2^2 + 2 \cdot 3 - 2 \cdot 3^2 = 4 + 6 - 2 \cdot 9 = 10 - 18 = -8
+\end{equation*}
+
+\n and $ -8 \neq 0$ so the theorem is not correct.
+
+\section*{3.3.25}
+Prove that for every real number $x$ there is a real number $y$ such that for every real number $z$, $yz = (x + z)^2 - (x^2 + z^2)$. \\
+
+\n We want to prove
+$\forall x \exists y \forall z (yz = (x + z)^2 - (x^2 + z^2))$.\\
+
+\n We let $x$ be arbitrary and make our goal $\exists y \forall z (yz = (x + z)^2 - (x^2 + z^2))$. \\
+
+\begin{table}[h]
+\begin{tabular}{ll}
+\hline
+Givens & Goals   \\ \hline
+$x$ is arbitrary & $\exists y \forall z (yz = (x + z)^2 - (x^2 + z^2))$ \\  \hline
+\end{tabular}
+\end{table}
+
+\n Let $x$ be an arbitrary real number \\
+\indent [proof of $\exists y \forall z (yz = (x + z)^2 - (x^2 + z^2))$] \\
+\n Therefore $\forall x \exists y \forall z (yz = (x + z)^2 - (x^2 + z^2))$ \\
+
+\n Now we need to find a $y$ that makes the statement $\forall z (yz = (x + z)^2 - (x^2 + z^2))$ true. This suggests we solve the equation $yz = (x + z)^2 - (x^2 + z^2)$ for $y$.
+
+\begin{align*}
+yz &= (x + z)^2 - (x^2 + z^2) \\
+yz &= x^2 + 2xz + z^2 - x^2 - z^2 \\
+yz &= 2xz \\
+y &= 2x \\
+\end{align*}
+
+\n The last line above $y = 2x$ works even if $z = 0$ because in that case $yz = 0$ and $2xz = 0$ and there is no need to divide by $z$ because we have $0 = 0$. \\
+
+
+\n Let $x$ be an arbitrary real number \\
+\indent Let $y = 2x$ \\
+\indent \indent Let $z$ be an arbitrary real number \\
+\indent \indent \indent [proof of $yz = (x + z)^2 - (x^2 + z^2)$] \\
+\indent \indent Therefore $\forall z (yz = (x + z)^2 - (x^2 + z^2))$ \\
+\indent Therefore $\exists y \forall z (yz = (x + z)^2 - (x^2 + z^2))$ \\
+\n Therefore $\forall x \exists y \forall z (yz = (x + z)^2 - (x^2 + z^2))$ \\
+
+\n When writing the proof we have to make sure the order we introduce the variables is the same as above (i.e., we introduce $x$, $y$, and then $z$). When we state $y = 2x$ in the proof, we only have defined $x$ up to that point, so both values we choose for $x$ and $y$ must then work for every value of $z$, or every real number. (See https://github.com/kstratto/How-to-Prove-It/blob/master/How\%20to\%20Prove\%20It\%20-\%20Chapter\%203.pdf.)
+
+\begin{theorem} For every real number $x$ there is a real number $y$ such that for every real number $z$, $yz = (x + z)^2 - (x^2 + z^2)$.
+\end{theorem}
+\begin{proof}
+Let $x$ be an arbitrary real number. Let $y = 2x$. Let $z$ be an arbitrary real number. Then
+
+\begin{equation*}
+2xz = (x + z)^2 - (x^2 + z^2) = x^2 + 2xz + z^2 - x^2 - z^2 = 2xz
+\end{equation*}
+
+\end{proof}
+
 
 \end{document}
 
