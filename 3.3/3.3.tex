@@ -1092,8 +1092,24 @@ Let $x$ be an arbitrary real number. Let $y = 2x$. Let $z$ be an arbitrary real 
 \begin{equation*}
 2xz = (x + z)^2 - (x^2 + z^2) = x^2 + 2xz + z^2 - x^2 - z^2 = 2xz
 \end{equation*}
-
 \end{proof}
+
+\section*{Exercise 3.3.26}
+
+\subsection*{A}
+Comparing the various rules for dealing with quantifiers in proofs, you should see a similarity between the rules for goals of the form $\forall x P(x)$ and givens of the form $\exists x P(x)$. What is this similarity? What about the rules for goals of the form $\exists x P(x)$ and givens of the from $\forall x P(x)$? \\
+
+\n Rules for goals of the form $\forall P(x)$ and givens of the form $\exists x P(x)$ are similar because the strategy for both of these involve introducing a new variable into the proof. In the case of a goal of the form $\forall P(x)$, say $\forall x \in A P(x)$, a new variable $y$ can be introduced that stands for an arbitrary element of the set $A$ and this new variable can be used like any other given. In the case of a given of the form $\exists x P(x)$, a new variable is also introduced, say $x_0$, that we assume makes the statement $P(x)$ of true. This new variable $x_0$ can also now be used as a given. With both of the new variables it is important not to make any other assumptions about them. \\
+
+\n Rules for goals of the form $\exists x P(x)$ and givens of the form $\forall x P(x)$ are similar because both of these strategies involve introducing a specific value for $x$ that makes $P(x)$ true instead of just introducing a variable that is assumed to make $P(x)$ true.
+
+\subsection*{B}
+Can you think of a reason why these similarities might be expected? \\
+\n (Hint: Think about how proof by contradiction works when the goal starts with a quantifier.)\\
+
+\n When proving a goal of the form $\forall x P(x)$ by contradiction, we assume $\exists x \neg P(x)$ as a goal. When proving a goal of the form $\exists x P(x)$ by contradiction, we assume $\forall x \neg P(x)$ as a goal.\\
+
+\n Maybe the similarities are to be expected because the strategies for each set of givens and goals (e.g., goals of the form $\forall x P(x)$ and givens of the form $\exists x P(x)$) are like inverses. For example, for the statement $\forall x P(x)$ to not be true then the statement $\exists x \neg P(x)$ must be true.
 
 
 \end{document}
