@@ -1,0 +1,57 @@
+\documentclass{article}
+
+%\documentclass{scrartcl}
+%\usepackage{changepage}
+%\usepackage{scrextend}
+
+\usepackage{amssymb,amsmath,amsthm}
+% amssymb has empty set symbo
+\usepackage{scrextend} % for \begin{addmargin}[0.55cm]{0cm} text \end{margin}
+
+\usepackage{mathrsfs} % for \mathscr{P}
+\usepackage{float}
+
+
+\newcommand{\n}{ \noindent }
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\G}{\mathcal{G}}
+%\newcommand{\pwset}{\mathcal{P}}
+\newcommand{\pwset}{\mathscr{P}}
+
+
+\newtheorem*{theorem}{Theorem}  % This enables \begin{theorem}
+
+%\DeclareFontFamily{U}{MnSymbolC}{}
+%\DeclareSymbolFont{MnSyC}{U}{MnSymbolC}{m}{n}
+%\DeclareFontShape{U}{MnSymbolC}{m}{n}{
+%  <-6>    MnSymbolC5
+%  <6-7>   MnSymbolC6
+%  <7-8>   MnSymbolC7
+%  <8-9>   MnSymbolC8
+%  <9-10>  MnSymbolC9
+%  <10-12> MnSymbolC10
+%  <12->   MnSymbolC12%
+%}{}
+%\DeclareMathSymbol{\powerset}{\mathord}{MnSyC}{180}
+
+%\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\begin{document}
+\section*{3.4.1}
+Use the methods of this chapter to prove that $\forall x (P(x) \land Q(x))$ is equivalent to $\forall x P(x) \land \forall x Q(x)$. \\
+
+\n We want to prove
+$\forall x(P(x) \land Q(x) \iff \forall x P(x) \land \forall x Q(x))$. \\
+
+\begin{theorem} The statement $\forall x (P(x) \land Q(x))$ is equivalent to $\forall x P(x) \land \forall x Q(x)$.
+\end{theorem}
+\begin{proof}
+$(\rightarrow)$ Suppose $\forall x (P(x) \land Q(x))$. Let $y$ be arbitrary. Since $\forall x (P(x) \land Q(x))$ it follows $P(y)$ and $Q(y)$. Since $y$ was arbitrary, we can conclude $\forall x P(x)$ and $\forall x Q(x)$ or $\forall x P(x) \land \forall x Q(x)$.
+
+$(\leftarrow)$ Let $y$ be arbitrary. Since $\forall x P(x)$ and $\forall x Q(x)$ then it follows $P(y)$ and $Q(y)$. Since $y$ was arbitrary we can conclude $\forall x (P(x) \land Q(x))$. 
+\end{proof}
+
+
+
+
+\end{document}
