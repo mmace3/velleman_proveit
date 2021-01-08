@@ -60,5 +60,13 @@ Prove that if $A \subseteq B$ and $A \subseteq C$ then $A \subseteq B \cap C$.
 Let $x$ be arbitrary and suppose $x \in A$. Since $A \subseteq B$ then $x \in B$ and since $A \subseteq C$ then $x \in C$ or $x \in B \cap C$. Therefore, if $x \in A$ then $x \in B \cap C$ and since $x$ was arbitrary we can conclude $A \subseteq B \cap C$.
 \end{proof}
 
+\section{3.4.3}
+Suppose $A \subseteq B$. Prove that for every set $C$, $C \setminus B \subseteq C \setminus A$.
+
+\begin{theorem} Suppose $A \subseteq B$, then for every set $C$, $C \setminus B \subseteq C \setminus A$.
+\end{theorem}
+\begin{proof}
+Suppose $A \subseteq B$ and $C$ is an arbitrary set. Let $x$ be arbitrary and suppose $x \in C \setminus B$, which means $x \in C$ and $x \notin B$. Since $x \notin B$ and $A \subseteq B$, then $x \notin A$, which means that $x \in C \setminus A$. Therefore, if $x \in C \setminus B$ then $x \in C \setminus A$ and since $x$ and $C$ were arbitrary, we can conclude $\forall C (C \setminus B \subseteq C \setminus A).$
+\end{proof}
 
 \end{document}
