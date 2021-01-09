@@ -93,7 +93,19 @@ x \in A \setminus (B \cap C) ~ &\text{iff} ~ x \in A \rightarrow (x \notin B \la
 &\text{iff} ~ x \in A \setminus B \lor x \in A \setminus C \\
 &\text{iff} ~ x \in (A \setminus B) \cup (A \setminus C) \\
 \end{align*}
-
 \end{proof}
+
+\section*{3.4.7}
+
+\begin{theorem} For any sets $A$ and $B$, $\pwset(A \cap B) = \pwset(A) \cap \pwset(B)$.
+\end{theorem}
+\begin{proof}
+$(\rightarrow)$ Let $M$ be an arbitrary set and suppose $M \in \pwset(A \cap B)$. Then $M \subseteq A \cap B$. Let $x$ be arbitrary and suppose $x \in M$. Since $M \subseteq A \cap B$, $x \in A \cap B$ and therefore $x \in A$. Since $x$ was arbitrary, $M \subseteq A$ and therefore $M \in \pwset(A)$. Similarly, since $M \subseteq A \cap B$, $x \in B$. Since $x$ was arbitrary, $M \subseteq B$ and therefore $M \in \pwset(B)$. Therefore, $M \in \pwset(A)$ and $M \in \pwset(B)$.
+
+$(\leftarrow)$ Now suppose $M \in \pwset(A) \cap \pwset(B)$. Then $M \subseteq A$ and $M \subseteq B$. Suppose $x \in M$. Since $M \subseteq A$ and $M \subseteq B$ then $x \in A \cap B$. Since $x$ was arbitrary, $M \subseteq A \cap B$ and therefore $M \in \pwset(A \cap B)$.
+\end{proof}
+
+
+
 
 \end{document}
