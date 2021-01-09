@@ -78,5 +78,22 @@ Prove that if $A \subseteq B \setminus C$ and $A \neq \varnothing$ then $B \not\
 Let $x$ be arbitrary and suppose $x \in A$. Since $A \subseteq B \setminus C$ then $x \in B$ and $x \notin C$. Since $x$ was arbitrary we can conclude $B \not\subseteq C$.
 \end{proof}
 
+\section*{3.4.6}
+Prove that for any sets $A$, $B$, and $C$, $A \setminus(B \cap C) = (A \setminus B) \cup (A \setminus C)$ finding a string of equivalences starting with $x \in A \setminus (B \cap C)$ and ending with $x \in (A \setminus B) \cup (A \setminus C)$.
+
+\begin{theorem} for any sets $A$, $B$, and $C$, $A \setminus(B \cap C) = (A \setminus B) \cup (A \setminus C)$.
+\end{theorem}
+\begin{proof}
+Suppose $A$, $B$, and $C$ are arbitrary sets. Then
+\begin{align*}
+x \in A \setminus (B \cap C) ~ &\text{iff} ~ x \in A \rightarrow (x \notin B \land x \notin C) \\
+&\text{iff} ~ x \notin A \lor (x \notin B \land x \notin C) \\
+&\text{iff} ~ (x \notin A \lor x \notin B) \land (x \notin A \lor x \notin C) \\
+&\text{iff} ~ (x \in A \rightarrow x \notin B) \lor (x \in A \rightarrow x \notin C) \\
+&\text{iff} ~ x \in A \setminus B \lor x \in A \setminus C \\
+&\text{iff} ~ x \in (A \setminus B) \cup (A \setminus C) \\
+\end{align*}
+
+\end{proof}
 
 \end{document}
