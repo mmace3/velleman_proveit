@@ -137,4 +137,22 @@ The problem is with using the same variable $k$ for defining $m$ as an even inte
 \subsection*{B}
 Let $m = 2$ and $n = -3$. Then $n^2 - m^2 = (-3)^2 - 2^2 = 9 - 4 = 5$ and $n + m = -3 + 2 = -1$. Therefore $n^2 - m^2 \neq n + m$.
 
+
+\section*{3.4.12}
+\begin{theorem} $\forall x \in \mathbb{R}[\exists y \in \mathbb{R} (x + y = xy) \iff x \neq 1] $
+\end{theorem}
+\begin{proof}
+$(\rightarrow)$ We will prove by contradiction. Suppose $x$ is an arbitrary real number and there exists a real number $y$ such that $x + y = xy$. Now suppose $x = 1$. Since $x + y = xy$, then $y = \tfrac{x}{x - 1}$. But this contradicts $x = 1$ because there is no real number $y$ such that $y = x/0$.
+
+$(\leftarrow)$ Now suppose $x \neq 1$ and $y = \tfrac{x}{x-1}$. Then
+
+\begin{align*}
+x + y &= x + \frac{x}{x+1} = \frac{x(x-1) + x}{x-1} \\
+&= \frac{x^2 - x + x}{x-1} \\
+&= \frac{x^2}{x-1} = xy
+\end{align*}
+
+\end{proof}
+
+
 \end{document}
