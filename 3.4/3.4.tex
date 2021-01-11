@@ -166,7 +166,13 @@ $(\leftarrow)$ Now suppose $x \neq 1$ and $y = \tfrac{x^2}{x-1}$. Then
 y - x = \frac{x^2}{x-1} - x &= \frac{x^2 - x(x-1)}{x-1} \\
 &= \frac{x^2-x+2+x}{x-1} = \frac{x}{x-1} = \frac{y}{x}
 \end{align*}
+\end{proof}
 
+\section*{3.4.14}
+\begin{theorem} If $B$ is a set and $\F$ is a family of sets, then $\cup \{A \setminus B | A \in \F\} \subseteq \cup (\F \setminus \pwset(B))$.
+\end{theorem}
+\begin{proof}
+Let $x$ be arbitrary and suppose $x \in \cup\{A \setminus B | A \in \F\}$. This means that there is a set $A \in \F$ such that $x \in A$ and also $x \notin B$. Since $x \notin B$ and $x \in A$, then $A \notin \pwset(B)$. Thus there is a set $A \in \F$, $x \in A$, and $A \notin \pwset(B)$, which means that $x \in \cup(\F \setminus \pwset(B))$. Therefore, if $x \in \cup \{A \setminus B | A \in \F\}$ then $x \in \cup(\F \setminus \pwset(B))$ and since $x$ was arbitrary, we can conclude $\cup \{ A \setminus B | A \in \F\} \subseteq \cup (\F \setminus \pwset (B))$.
 \end{proof}
 
 
