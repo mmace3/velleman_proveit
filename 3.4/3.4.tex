@@ -112,7 +112,15 @@ $(\leftarrow)$ Now suppose $M \in \pwset(A) \cap \pwset(B)$. Then $M \subseteq A
 $(\rightarrow)$ Suppose $A \subseteq B$. Let $M$ be an arbitrary set and suppose $M \in \pwset(A)$. Then $M \subseteq A$. Now let $y$ be arbitrary and suppose $y \in M$. Since $M \subseteq A$ then $y \in A$, and since $A \subseteq B$ then $y \in B$. Since $y$ was arbitrary, $M \subseteq B$ and therefore $M \in \pwset(B)$. Since $M$ was arbitrary, $\pwset(A) \subseteq \pwset(B)$.
 
 $(\leftarrow)$ Now suppose $\pwset(A) \subseteq \pwset(B)$ and $y \in A$. Then the set $\{y\}$ is in $\pwset(A)$. Since $\pwset(A) \subseteq \pwset(B)$ then $\{y\} \in \pwset(B)$ and $y \in B$. Since $y$ was arbitrary, $A \subseteq B$. 
-
 \end{proof}
+
+\section*{3.4.9}
+\begin{theorem} If $x$ and $y$ are odd integers, then $xy$ is odd.
+\end{theorem}
+\begin{proof}
+Suppose $x$ and $y$ are odd integers. This means there is an integer $k$ such that $x = 2k + 1$ and there is an integer $j$ such that $y = 2j + 1$. Therefore, $xy = 2(2kj + k + j) = 4kj + 2k + 2j + 1 = (2k + 1)(2j + 1)$, and since $2kj + k + j$ is an integer, then $xy$ is odd.
+\end{proof}
+
+
 
 \end{document}
