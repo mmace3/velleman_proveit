@@ -105,7 +105,14 @@ $(\rightarrow)$ Let $M$ be an arbitrary set and suppose $M \in \pwset(A \cap B)$
 $(\leftarrow)$ Now suppose $M \in \pwset(A) \cap \pwset(B)$. Then $M \subseteq A$ and $M \subseteq B$. Suppose $x \in M$. Since $M \subseteq A$ and $M \subseteq B$ then $x \in A \cap B$. Since $x$ was arbitrary, $M \subseteq A \cap B$ and therefore $M \in \pwset(A \cap B)$.
 \end{proof}
 
+\section*{3.4.8}
+\begin{theorem} $A \subseteq B \iff \pwset(A) \subseteq \pwset(B)$
+\end{theorem}
+\begin{proof}
+$(\rightarrow)$ Suppose $A \subseteq B$. Let $M$ be an arbitrary set and suppose $M \in \pwset(A)$. Then $M \subseteq A$. Now let $y$ be arbitrary and suppose $y \in M$. Since $M \subseteq A$ then $y \in A$, and since $A \subseteq B$ then $y \in B$. Since $y$ was arbitrary, $M \subseteq B$ and therefore $M \in \pwset(B)$. Since $M$ was arbitrary, $\pwset(A) \subseteq \pwset(B)$.
 
+$(\leftarrow)$ Now suppose $\pwset(A) \subseteq \pwset(B)$ and $y \in A$. Then the set $\{y\}$ is in $\pwset(A)$. Since $\pwset(A) \subseteq \pwset(B)$ then $\{y\} \in \pwset(B)$ and $y \in B$. Since $y$ was arbitrary, $A \subseteq B$. 
 
+\end{proof}
 
 \end{document}
