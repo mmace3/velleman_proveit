@@ -121,6 +121,14 @@ $(\leftarrow)$ Now suppose $\pwset(A) \subseteq \pwset(B)$ and $y \in A$. Then t
 Suppose $x$ and $y$ are odd integers. This means there is an integer $k$ such that $x = 2k + 1$ and there is an integer $j$ such that $y = 2j + 1$. Therefore, $xy = 2(2kj + k + j) = 4kj + 2k + 2j + 1 = (2k + 1)(2j + 1)$, and since $2kj + k + j$ is an integer, then $xy$ is odd.
 \end{proof}
 
+\section*{3.4.10}
+\begin{theorem} For every integer $n$, $n^3$ is even iff $n$ is even.
+\end{theorem}
+\begin{proof}
+$(\rightarrow)$ Let $n$ be arbitrary. We will prove the contrapositive. Suppose $x$ is odd, which means there exists an integer $k$ such that $x = 2k + 1$. Therefore, $n^3 = (2k + 1)^3 = 8k^3 + 12k^2 + 6k + 1 = 2(4k^3 + 6k^2 + 3k) + 1$. Since $4k^3 + 6k^2 + 3k$ is an integer, $n^3$ is odd. Therefore, if $n^3$ is even, $n$ is even.
+
+$(\leftarrow)$ Now suppose $n$ is even, which means there exists an integer $m$ such that $n = 2m$. Now $n^3 = (2m)^3 = 8m^3 = 2(4m^3)$ and since $4m^3$ is an integer, $n^3$ is even.
+\end{proof}
 
 
 \end{document}
