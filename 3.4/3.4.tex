@@ -172,8 +172,16 @@ y - x = \frac{x^2}{x-1} - x &= \frac{x^2 - x(x-1)}{x-1} \\
 \begin{theorem} If $B$ is a set and $\F$ is a family of sets, then $\cup \{A \setminus B | A \in \F\} \subseteq \cup (\F \setminus \pwset(B))$.
 \end{theorem}
 \begin{proof}
-Let $x$ be arbitrary and suppose $x \in \cup\{A \setminus B | A \in \F\}$. This means that there is a set $A \in \F$ such that $x \in A$ and also $x \notin B$. Since $x \notin B$ and $x \in A$, then $A \notin \pwset(B)$. Thus there is a set $A \in \F$, $x \in A$, and $A \notin \pwset(B)$, which means that $x \in \cup(\F \setminus \pwset(B))$. Therefore, if $x \in \cup \{A \setminus B | A \in \F\}$ then $x \in \cup(\F \setminus \pwset(B))$ and since $x$ was arbitrary, we can conclude $\cup \{ A \setminus B | A \in \F\} \subseteq \cup (\F \setminus \pwset (B))$.
+Let $x$ be arbitrary and suppose $x \in \cup\{A \setminus B | A \in \F\}$. This means that there is a set $A \in \F$ such that $x \in A$ and also $x \notin B$. Since $x \in A$ and $x \notin B$, then $A \not\subseteq B$ and $A \notin \pwset(B)$. Thus there is a set $A \in \F$ such that $x \in A$, and $A \notin \pwset(B)$, which means that $x \in \cup(\F \setminus \pwset(B))$. Therefore, if $x \in \cup \{A \setminus B | A \in \F\}$ then $x \in \cup(\F \setminus \pwset(B))$ and since $x$ was arbitrary, we can conclude $\cup \{ A \setminus B | A \in \F\} \subseteq \cup (\F \setminus \pwset (B))$.
 \end{proof}
+
+\section*{3.4.15}
+\begin{theorem}If $\F$ and $\G$ are nonempty families of sets and every element of $\F$ is disjoint from some element of $\G$, then $\cup \F$ and $\cap \G$ are disjoint.
+\end{theorem}
+\begin{proof}
+Suppose $\F$ and $\G$ are nonempty families of sets and every element of $\F$ is disjoint from some element of $\G$. We will use proof by contradiction. Now suppose $\cup \F$ and $\cap \G$ are not disjoint. Then there exists a $y$ such that $y \in \cup \F$ and $y \in \cap \G$. Since $y \in \cup \F$ there is a set in $\F$ that contains $y$ and since $y \in \cap \G$, $y$ is in every set in $\G$. But because every element of $\F$ is disjoint from some element of $\G$, then there is at least one set in $\G$ that does not contain $y$. But this contradicts $y \in \cap \G$. Therefore, $(\cup \F) \cap (\cap \G) = \varnothing$. 
+\end{proof}
+
 
 
 \end{document}
