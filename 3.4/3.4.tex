@@ -182,6 +182,14 @@ Let $x$ be arbitrary and suppose $x \in \cup\{A \setminus B | A \in \F\}$. This 
 Suppose $\F$ and $\G$ are nonempty families of sets and every element of $\F$ is disjoint from some element of $\G$. We will use proof by contradiction. Now suppose $\cup \F$ and $\cap \G$ are not disjoint. Then there exists a $y$ such that $y \in \cup \F$ and $y \in \cap \G$. Since $y \in \cup \F$ there is a set in $\F$ that contains $y$ and since $y \in \cap \G$, $y$ is in every set in $\G$. But because every element of $\F$ is disjoint from some element of $\G$, then there is at least one set in $\G$ that does not contain $y$. But this contradicts $y \in \cap \G$. Therefore, $(\cup \F) \cap (\cap \G) = \varnothing$. 
 \end{proof}
 
+\section*{3.4.16}
+\begin{theorem} For any set $A$, $A = \cup \pwset(A)$.
+\end{theorem}
+\begin{proof}
+$(\rightarrow)$ Suppose $A$ is an arbitrary set, $x$ is arbitrary, and $x \in A$. Then there is subset of $A$ that contains $x$ and, by definition, this subset is in $\pwset(A)$. Therefore, $x \in \cup \pwset(A)$. Since $x$ was arbitrary $A \subseteq \pwset(A)$.
+
+$(\leftarrow)$ Now suppose $x \in \cup \pwset(A)$. This means there is a subset of $A$ that contains $x$ and therefore $x \in A$. Since $x$ was arbitrary we conclude $\cup \pwset(A) \subseteq A$. Since $A$ was arbitrary, we can conclude for all sets $A$, $A = \cup \pwset(A)$. 
+\end{proof}
 
 
 \end{document}
