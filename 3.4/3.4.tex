@@ -191,5 +191,18 @@ $(\rightarrow)$ Suppose $A$ is an arbitrary set, $x$ is arbitrary, and $x \in A$
 $(\leftarrow)$ Now suppose $x \in \cup \pwset(A)$. This means there is a subset of $A$ that contains $x$ and therefore $x \in A$. Since $x$ was arbitrary we conclude $\cup \pwset(A) \subseteq A$. Since $A$ was arbitrary, we can conclude for all sets $A$, $A = \cup \pwset(A)$. 
 \end{proof}
 
+\section*{3.4.17}
+\subsection*{A}
+\begin{theorem} $\cup ( \F \cap \G) \subseteq (\cup \F) \cap (\cup \G)$
+\end{theorem}
+\begin{proof}
+Let $x$ be arbitrary and suppose $x \in \cup (\F \cap \G)$. Since $x \in \cup (\F \cap \G)$ there is a set in $\F$ and in $\G$ that both contain $x$. Since there is a set in $\F$ than contains $x$, then $x \in \cup \F$ and since there is a set in $\G$ that contains $x$, $x \in \cup \G$. Therefore, $x \in (\cup \F) \cap (\cup \G)$. Since $x$ was arbitrary, we can conclude $\cup (\F \cap \G) \subseteq (\cup \F) \cap (\cup \G)$.
+\end{proof}
+
+\subsection*{B}
+The mistake is that we can't choose a set $A$ such that $A \in \F$ and $A \in \G$ and $x \in A$. The given $x \in (\cup \F) \cap (\cup \G)$ means that $x$ is within a set in $\F$ and within a set in $\G$, but these two sets are not necessarily the same set.
+
+\subsection*{C}
+Let $\F = \{\{1,2\}, \{3\}\}$ and $\G = \{\{4,5\}, \{1\}\}$. Then $\cup (\F \cap \G) = \varnothing$, but $(\cup \F) \cap (\cup \G) = \{1\}$.
 
 \end{document}
