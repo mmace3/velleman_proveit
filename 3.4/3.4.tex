@@ -219,14 +219,23 @@ $(\leftarrow)$ Now suppose $\forall A \in \F \forall B \in \G (A \cap B \subsete
 
 \section*{3.4.19}
 
-\begin{theorem} Suppose $\F$ and $\G$ are families of sets. Prove that $\cup \F$ and $\cup \G$ are disjoint iff for all $A \in \F$ and $B \in \G$, $A$ and $B$ are disjoint.
+\begin{theorem} Suppose $\F$ and $\G$ are families of sets. Then $\cup \F$ and $\cup \G$ are disjoint iff for all $A \in \F$ and $B \in \G$, $A$ and $B$ are disjoint.
 \end{theorem}
 
 \begin{proof}
-$(\rightarrow)$ Suppose $\cup \F \cap \cup \G = \varnothing$. We will prove by contradiction. Let $A$ be an arbitrary set in $\F$ and $B$ be an arbitrary set in $\G$. Suppose $x \in A \cap B$, which means $x \in A$, $x \in B$, and $A \cap B \neq \varnothing$. Since $x \in A$ and $A \in \F$ then $x \in \cup \F$ and since $x \in B$ and $B \in \G$ then $x \in \cup \G$. Therefore $x \in \cup \F \cap \cup \G$, but this contradicts $\cup \F \cap \cup \G = varnothing$. Therefore $A \cap B = \varnothing$ and since $A$ and $B$ were arbitrary we can conclude $\forall A \in \F \forall B \in \G (A \cap B = \varnothing)$.
+$(\rightarrow)$ Suppose $\cup \F \cap \cup \G = \varnothing$. We will prove by contradiction. Let $A$ be an arbitrary set in $\F$ and $B$ be an arbitrary set in $\G$. Suppose $x \in A \cap B$, which means $x \in A$, $x \in B$, and $A \cap B \neq \varnothing$. Since $x \in A$ and $A \in \F$ then $x \in \cup \F$ and since $x \in B$ and $B \in \G$ then $x \in \cup \G$. Therefore $x \in \cup \F \cap \cup \G$, but this contradicts $\cup \F \cap \cup \G = \varnothing$. Therefore $A \cap B = \varnothing$ and since $A$ and $B$ were arbitrary we can conclude $\forall A \in \F \forall B \in \G (A \cap B = \varnothing)$.
 
 $(\leftarrow)$ Now suppose $\forall A \in \F \forall B \in \G (A \cap B = \varnothing)$. We will again prove by contradiction. Suppose $\cup \F$ and $\cup \G$ are not disjoint, which means there is an element $x$ that is in both $\cup \F$ and $\cup \G$. This means that there is a set in $\F$ that contains $x$ and there is a set in $\G$ that contains $x$. However, this contradicts our given that every set in $\F$ is disjoint from every set in $\G$. Therefore $\cup \F \cap \cup \G = \varnothing$.
 \end{proof}
 
+\section*{3.4.20}
+\begin{theorem} $\cup ( \F \setminus \G) \subseteq (\cup \F) \setminus (\cup \G)$ iff $ \forall A \in (\F \setminus \G) \forall B \in \G(A \cap B = \varnothing)$
+\end{theorem}
+
+\begin{proof} 
+$(\rightarrow)$ Suppose $\cup ( \F \setminus \G) \subseteq (\cup \F) \setminus (\cup \G)$. Let $A$ be an arbitrary set in $(\F \setminus \G)$ and $B$ be an arbitrary set in $\G$. We will prove by contradiction. Now suppose that $A$ and $B$ are not disjoint, which means there is an element $x$ such that $x \in A$ and $x \in B$. Since $x \in A$ and $A \in (\F \setminus \G)$ then $x \in \cup (\F \setminus \G)$ and because $\cup (\F \setminus \G)$ is a subset of $(\cup \F) \setminus (\cup\G)$, then $x \in (\cup \F) \setminus (\cup \G)$. This means that $x \in \cup \F$ and $x \notin \cup \G$. Since $x \notin \cup \G$ then there is no set in $\G$ that contains $x$, but this contradicts $x \in B$ and $B \in \G$. Therefore $A$ and $B$ are disjoint and since $A$ and $B$ were arbitrary we can conclude $\forall A \in (\F \setminus \G) \forall B \in \G (A \cap B = \varnothing)$.
+
+$\leftarrow$ Suppose all sets in $\F \setminus \G$ and $\G$ are disjoint. Let $x$ be arbitrary and suppose $x \in \cup(\F \setminus \G)$, which means there is a set in $\F$ that contains $x$ and $x \in \cup \F$. Now let $B$ be an arbitrary set in $G$. Since all sets in $\F \setminus \G$ and $\G$ are disjoint and $x \in \cup \F$, then $x \notin B$ and since $B$ was arbitrary we can conclude $\forall B \in \G(x \notin B)$ or $x \notin \cup \G$. Since $x \in \cup \F$ and $x \notin \cup \G$, then $x \in (\cup \F) \setminus (\cup \G)$. Therefore if $x \in \cup(\F \setminus \G)$ then $x \in ( \cup \F) \setminus (\cup \G)$ and since $x$ was arbitrary we can conclude  $\cup ( \F \setminus \G) \subseteq (\cup \F) \setminus (\cup \G)$ .
+\end{proof}
 
 \end{document}
