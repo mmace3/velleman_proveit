@@ -1,5 +1,6 @@
 \documentclass{article}
 
+%\documentclass{amsart}
 %\documentclass{scrartcl}
 %\usepackage{changepage}
 %\usepackage{scrextend}
@@ -216,13 +217,15 @@ $(\leftarrow)$ Now suppose $\forall A \in \F \forall B \in \G (A \cap B \subsete
 
 \end{proof}
 
-\section{3.4.19}
+\section*{3.4.19}
 
 \begin{theorem} Suppose $\F$ and $\G$ are families of sets. Prove that $\cup \F$ and $\cup \G$ are disjoint iff for all $A \in \F$ and $B \in \G$, $A$ and $B$ are disjoint.
 \end{theorem}
 
 \begin{proof}
-$(\rightarrow)$ Suppose $\cup \F \cap \cup \G = \varnothing$
+$(\rightarrow)$ Suppose $\cup \F \cap \cup \G = \varnothing$. We will prove by contradiction. Let $A$ be an arbitrary set in $\F$ and $B$ be an arbitrary set in $\G$. Suppose $x \in A \cap B$, which means $x \in A$, $x \in B$, and $A \cap B \neq \varnothing$. Since $x \in A$ and $A \in \F$ then $x \in \cup \F$ and since $x \in B$ and $B \in \G$ then $x \in \cup \G$. Therefore $x \in \cup \F \cap \cup \G$, but this contradicts $\cup \F \cap \cup \G = varnothing$. Therefore $A \cap B = \varnothing$ and since $A$ and $B$ were arbitrary we can conclude $\forall A \in \F \forall B \in \G (A \cap B = \varnothing)$.
+
+$(\leftarrow)$ Now suppose $\forall A \in \F \forall B \in \G (A \cap B = \varnothing)$. We will again prove by contradiction. Suppose $\cup \F$ and $\cup \G$ are not disjoint, which means there is an element $x$ that is in both $\cup \F$ and $\cup \G$. This means that there is a set in $\F$ that contains $x$ and there is a set in $\G$ that contains $x$. However, this contradicts our given that every set in $\F$ is disjoint from every set in $\G$. Therefore $\cup \F \cap \cup \G = \varnothing$.
 \end{proof}
 
 
