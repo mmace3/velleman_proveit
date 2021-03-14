@@ -205,4 +205,25 @@ The mistake is that we can't choose a set $A$ such that $A \in \F$ and $A \in \G
 \subsection*{C}
 Let $\F = \{\{1,2\}, \{3\}\}$ and $\G = \{\{4,5\}, \{1\}\}$. Then $\cup (\F \cap \G) = \varnothing$, but $(\cup \F) \cap (\cup \G) = \{1\}$.
 
+
+\section*{3.4.18}
+\begin{theorem} Suppose $\F$ and $\G$ are families of sets, then $(\cup \F) \cap (\cup \G) \subseteq \cup (\F \cap \G) \iff \forall A \in \F \forall B \in \G (A \cap B \subseteq \cup (\F \cap \G))$.
+\end{theorem}
+\begin{proof}
+$(\rightarrow)$ Suppose $(\cup \F) \cap (\cup \G) \subseteq \cup (\F \cap \G)$. Suppose $A$ is an arbitrary set in $\F$, $B$ is an arbitrary set in $\G$, $x$ is arbitrary, and $x \in A \cap B$. Since $x \in A \cap B$ and $A$ is an arbitrary set in $\F$, then $x \in \cup F$. Also, since $x \in A \cap B$ and $B$ is an arbitrary set in $\G$, then $x \in  \cup \G$. Therefore $x \in (\cup \F) \cap (\cup \G)$ and since $(\cup \F) \cap (\cup \G) \subseteq \cup (\F \cap \G)$, it follows that $x \in \cup (\F \cap \G)$. Therefore, if $x \in (\cup \F) \cap (\cup \G) \rightarrow x \in \cup (\F \cap \G)$ and since $x$, $A$, and $B$ were arbitrary we can conclude that $\forall A \in \F \forall B \in \G (A \cap B \subseteq \cup (\F \cap \G))$.
+
+$(\leftarrow)$ Now suppose $\forall A \in \F \forall B \in \G (A \cap B \subseteq \cup (\F \cap \G))$ and $x \in (\cup \F) \cap (\cup \G)$. Since $x \in (\cup \F) \cap (\cup \G)$, then there is a set $M \in F$ such that $x \in M$ and there is a set $N \in \G$ such that $x \in N$ and it follows that $x \in M \cap \G$. Then since $M \in \F$, $N \in \G$, $x \in M \cap \G$, and $\forall A \in \F \forall B \in \G (A \cap B \subseteq \cup (\F \cap \G))$ we can conclude that $x \in \cup (\F \cap \G))$. Therefore if $\forall A \in \F \forall B \in \G (A \cap B \subseteq \cup (\F \cap \G))$ then $(\cup \F) \cap (\cup \G) \subseteq \cup (\F \cap \G)$.
+
+\end{proof}
+
+\section{3.4.19}
+
+\begin{theorem} Suppose $\F$ and $\G$ are families of sets. Prove that $\cup \F$ and $\cup \G$ are disjoint iff for all $A \in \F$ and $B \in \G$, $A$ and $B$ are disjoint.
+\end{theorem}
+
+\begin{proof}
+$(\rightarrow)$ Suppose $\cup \F \cap \cup \G = \varnothing$
+\end{proof}
+
+
 \end{document}
