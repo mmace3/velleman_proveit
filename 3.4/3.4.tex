@@ -229,6 +229,18 @@ $(\leftarrow)$ Now suppose $\forall A \in \F \forall B \in \G (A \cap B = \varno
 \end{proof}
 
 \section*{3.4.20}
+Suppose $\F$ and $\G$ are families of sets.
+\subsection*{A}
+\begin{theorem} $(\cup \F) \setminus (\cup \G) \subseteq \cup(\F \setminus \G)$
+\end{theorem}
+\begin{proof}
+Let $x$ be arbitrary and suppose $x \in (\cup \F) \setminus (\cup \G)$, which means $x \in \cup \F$ and $x \notin \cup \G$. Since $x \in \cup \F$ there exists a set within $\F$ that contains $x$. Since $x \notin \cup \G$ there is no set in $\G$ that contains $x$. Since there is a set in $\F$ that contains $x$ and that set is not in $\G$, then $x \in \cup (\F \setminus \G)$. Since $x$ was arbitrary we can conclude $(\cup \F) \setminus (\cup \G) \subseteq \cup (\F \setminus \G)$.
+\end{proof}
+
+\subsection*{B}
+``Since $x \in A$ and $A \notin \G$, $x \notin \cup \G$'' is not true. Although $x \in A$ and $A \notin \G$, this does not mean $x \notin \cup \G$ because $x$ could be in another set in $G$ and would therefore be in $\cup \G$.
+
+\subsection*{C}
 \begin{theorem} $\cup ( \F \setminus \G) \subseteq (\cup \F) \setminus (\cup \G)$ iff $ \forall A \in (\F \setminus \G) \forall B \in \G(A \cap B = \varnothing)$
 \end{theorem}
 
@@ -237,5 +249,22 @@ $(\rightarrow)$ Suppose $\cup ( \F \setminus \G) \subseteq (\cup \F) \setminus (
 
 $\leftarrow$ Suppose all sets in $\F \setminus \G$ and $\G$ are disjoint. Let $x$ be arbitrary and suppose $x \in \cup(\F \setminus \G)$, which means there is a set in $\F$ that contains $x$ and $x \in \cup \F$. Now let $B$ be an arbitrary set in $G$. Since all sets in $\F \setminus \G$ and $\G$ are disjoint and $x \in \cup \F$, then $x \notin B$ and since $B$ was arbitrary we can conclude $\forall B \in \G(x \notin B)$ or $x \notin \cup \G$. Since $x \in \cup \F$ and $x \notin \cup \G$, then $x \in (\cup \F) \setminus (\cup \G)$. Therefore if $x \in \cup(\F \setminus \G)$ then $x \in ( \cup \F) \setminus (\cup \G)$ and since $x$ was arbitrary we can conclude  $\cup ( \F \setminus \G) \subseteq (\cup \F) \setminus (\cup \G)$ .
 \end{proof}
+
+\subsection*{D}
+Find an example of families of sets $\F$ and $\G$ for which $\cup(\F \setminus \G) \neq (\cup \F) \setminus (\cup \G)$.
+$\F = \{\{1\}, \{2,5\}\}$ and $ \G = \{\{2\}, \{10\}\}$ \\
+$\cup (\F \setminus \G) = \{1,2,5\}$ \\
+$(\cup \F) \setminus (\cup \G) = \{1,2,5\} \setminus \{2,10\} = \{1,5\}$ \\
+$ \{1,2,5\} \neq \{1,5\}$
+
+\section{3.4.21}
+\begin{theorem}Suppose $\F$ and $\G$ are families of sets. Prove that if $\cup \F \nsubseteq \cup \G$ then there is some $A \in \F$ such that for all $B \in \G$, $A \nsubseteq B$.
+\end{theorem}
+
+\begin{proof}
+Suppose $\cup \F \nsubseteq \cup \G$. This means there is an element $x$ that is in $\cup \F$ and not in $\cup \G$. Since $x \in \cup \F$ then there is a set in $\F$ that contains $x$ and since $x \notin \cup \G$ there is no set in $\G$ that contains $x$. Therefore there is a set in $\F$ that is not a subset of any set in $\G$ and we can conclude $\exists A \in \F \forall B \in \G (A \nsubseteq B)$.
+\end{proof}
+
+
 
 \end{document}
