@@ -265,6 +265,42 @@ $ \{1,2,5\} \neq \{1,5\}$
 Suppose $\cup \F \nsubseteq \cup \G$. This means there is an element $x$ that is in $\cup \F$ and not in $\cup \G$. Since $x \in \cup \F$ then there is a set in $\F$ that contains $x$ and since $x \notin \cup \G$ there is no set in $\G$ that contains $x$. Therefore there is a set in $\F$ that is not a subset of any set in $\G$ and we can conclude $\exists A \in \F \forall B \in \G (A \nsubseteq B)$.
 \end{proof}
 
+\section*{3.4.22}
+\subsection*{A}
+1. Prove goal of the form $\forall x P(x)$ \\
+2. Assume antecedent and prove consequent \\
+3. existential instantiation \\
+4. use a given of the form $P \land Q$ \\
+5. prove goal of the form $P \land Q$ \\
+6. Prove goal of the form $P \iff Q$ by proving $P \rightarrow Q$ and $Q \rightarrow P$.
 
+\subsection*{B}
+\begin{theorem} $B \setminus (\bigcup_{i \in I} A_{i}) = \bigcap_{i \in I} (B \setminus A_{i})$
+\end{theorem}
+\begin{proof}
+\begin{align*}
+x \in B \setminus (\bigcup_{i \in I} A_{i}) &= x \in B \land x \notin \bigcup_{i \in I} A_{i} \\
+&= x \in b \land \neg \exists i \in I(x \in A_{i}) \\
+&= x \in b \land \forall i \in I \neg (x \in A_{i}) \\
+&= x \in b \land \forall i \in I(x \notin A_{i}) \\
+&= \forall i \in I (x \in B \land x \notin A_{i}) \\
+&= x \in \bigcap_{i \in I} (B \setminus A_{i})
+\end{align*}
+\end{proof}
+
+\subsection*{C}
+\begin{theorem} $ B \setminus \left( \bigcap_{i \in I} A_{i} \right) = \bigcup_{i \in I} (B \setminus A_{i})$
+\end{theorem}
+\begin{proof}
+\begin{align*}
+x \in B \setminus \bigcap_{i \in I} A_{i} &= x \in B \land \lnot (\forall i \in I (x \in A_{i})) \\
+&= x \in B \land \exists i \in I \lnot (x \in A_{i}) \\
+&= x \in B \land \exists i \in I (x \notin A_{i}) \\
+&= \exists i \in I ( x \in B \land x \notin A_{i} ) \\
+&= x \in \bigcup_{i \in I} (B \setminus A_{i})
+\end{align*}
+\end{proof}
 
 \end{document}
+
+
