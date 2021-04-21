@@ -257,7 +257,7 @@ $\cup (\F \setminus \G) = \{1,2,5\}$ \\
 $(\cup \F) \setminus (\cup \G) = \{1,2,5\} \setminus \{2,10\} = \{1,5\}$ \\
 $ \{1,2,5\} \neq \{1,5\}$
 
-\section{3.4.21}
+\section*{3.4.21}
 \begin{theorem}Suppose $\F$ and $\G$ are families of sets. Prove that if $\cup \F \nsubseteq \cup \G$ then there is some $A \in \F$ such that for all $B \in \G$, $A \nsubseteq B$.
 \end{theorem}
 
@@ -300,6 +300,31 @@ x \in B \setminus \bigcap_{i \in I} A_{i} &= x \in B \land \lnot (\forall i \in 
 &= x \in \bigcup_{i \in I} (B \setminus A_{i})
 \end{align*}
 \end{proof}
+
+\section*{3.4.23}  
+Suppose $\{ A_{i} | i \in I\}$ and $\{B_{i} | i \in I\}$ are indexed families of sets and $I \neq \varnothing$.
+
+\subsection*{A}
+\begin{theorem} $\bigcup_{i \in I} ( A_{i} \setminus B_{i} ) \subseteq ( \bigcup_{i \in I} A_{i} ) \setminus (\bigcup_{i \in I} B_{i})$
+\end{theorem}
+\begin{proof}
+Suppose $i$ is arbitrary and that $x \in \bigcup_{i} (A_{i} \setminus B_{i})$. This means we can choose an $i$, say $i = 0$, such that $x \in A_{0}$ and $x \notin B_{0}$. Since $x \in A_{0}$ then $x$ is in $\bigcup_{i \in I} A_{i}$ and since $x \notin B_{0}$ then $x \notin \bigcap_{i \in I} B_{i}$. Therefore $x \in (\bigcup_{i \in I} A_{i}) \setminus (\bigcap_{i \in I} B_{i})$ and since $i$ was arbitrary we can conclude $\bigcup_{i \in I} ( A_{i} \setminus B_{i} ) \subseteq ( \bigcup_{i \in I} A_{i} ) \setminus (\bigcup_{i \in I} B_{i})$.
+\end{proof}
+
+\subsection*{B}
+Find an example for which $\bigcup_{i \in I} (A_{i} \setminus B_{i} ) \neq (\bigcup_{i \in I} A_{i} ) \setminus (\bigcap_{i \in I} B_{i})$ \\
+
+$B_{1} = \{1,2\}, B_{2} = \{3,4\}, A_{1} = \{1,2\}, A_{2} = \{2,5\}$ \\
+
+$\bigcup_{i \in I} A_{i} = \bigcup(\{1,2\}, \{3,4\}) = \{1,2,3,4\}$ \\
+
+$\bigcap_{i \in I} B_{i} = \bigcap(\{1,2\}, \{2,5\}) = \{2\}$ \\
+
+$(\bigcup_{i \in I} A_{i}) \setminus (\bigcap_{i \in I} B_{i} ) = \{1,2,3,4\} \setminus \{2\} = \{1,3,4\}$ \\
+
+$\bigcup_{i \in I} (A_{i} \setminus B_{i}) = \bigcup(\{1,2\} \setminus \{1,2\}, \{2,5\} \setminus \{3,4\}) = \bigcup ( \varnothing, \{2,5\}) = \{2, 5 \}$ \\
+
+$\{1,3,4\} \neq \{2,5\}$
 
 \end{document}
 
