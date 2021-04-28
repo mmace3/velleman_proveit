@@ -326,6 +326,38 @@ $\bigcup_{i \in I} (A_{i} \setminus B_{i}) = \bigcup(\{1,2\} \setminus \{1,2\}, 
 
 $(\bigcup_{i \in I} A_{i}) \setminus (\bigcap_{i \in I} B_{i} ) = \{1,3,4\} \neq \{2,5\} = \bigcup_{i \in I} (A_{i} \setminus B_{i})$
 
+
+\section*{3.4.24}
+Suppose $\{A_{i} | i \in I\}$ and $\{B_{i} | i \in I \}$ are families of sets.
+\subsection*{A}
+\begin{theorem} $\bigcup_{i \in I} (A_{i} \cap B_{i} ) \subseteq ( \bigcup_{i \in I} A_{i} ) \cap ( \bigcup_{i \in I} B_{i} )$
+\end{theorem}
+\begin{proof}
+Let $x$ be arbitrary and suppose $x \in \bigcup_{i \in I} ( A_{i} \cap B_{i} )$, which means we can choose an $i$, say $i = 0$, such that $x \in A_{0} \cap B_{0}$. If $x \in A_{0} \cap B_{0}$ then $x \in A_{0}$ and $x \in B_{0}$. Since $x \in A_{0}$ there exists an $i \in I$ such that $x \in A_{i}$ or $x \in \bigcup_{i \in I} A_{i}$. Using a similar argument we can conclude that $x \in \bigcup_{i \in I} B_{i}$. Since $x$ was arbitrary we can conclude that $x \in (\bigcup_{i \in I} A_{i}) \cap (\bigcup_{i \in I} B_{i})$.
+\end{proof}
+
+\subsection*{B}
+Find an example where $\bigcup_{i \in I} ( A_{i} \cap B_{i} ) \neq ( \bigcup_{i \in I} A_{i} ) \cap ( \bigcup_{i \in I} B_{i} )$. \\
+
+Since we already proved that $\bigcup_{i \in I} (A_{i} \cap B_{i} ) \subseteq ( \bigcup_{i \in I} A_{i} ) \cap ( \bigcup_{i \in I} B_{i} )$, we must find an example where $( \bigcup_{i \in I} A_{i} ) \cap ( \bigcup_{i \in I} B_{i} ) \nsubseteq \bigcup_{i \in I} (A_{i} \cap B_{i} )$. \\
+
+\begin{flushleft}
+Let $A_{1} = \{ 1 \}$, \\
+$A_{2} = \{ 2 \}$, \\
+$B_{1} = \{ 3 \}$, \\
+and $B_{2} \{ 1 \}$. \\
+
+\vspace{5mm} 
+Then $\bigcup_{i \in I} A_{i} = \{ 1, 2 \}$ and $\bigcup_{i \in I} = \{ 1, 3 \}$ and therefore \\
+$( \bigcup_{i \in I} A_{i} ) \cap ( \bigcup_{i \in I} B_{i} ) = \{1, 2 \} \cap \{ 1, 3 \} = \{ 1 \}$. \\
+
+\vspace{5mm}
+Also, $A_{1} \cap B_{1} = \{1 \} \cap \{3 \} = \varnothing$ and $A_{2} \cap B_{2} = \{2 \} \cap \{ 1 \} = \varnothing$ and therefore \\
+$ \bigcup_{i \in I} ( A_{i} \cap B_{i} ) = \varnothing$.
+
+\vspace{5mm}
+$( \bigcup_{i \in I} A_{i} ) \cap ( \bigcup_{i \in I} B_{i} ) = \{ 1 \} \neq \varnothing = \bigcup_{i \in I} ( A_{i} \cap B_{i} )$
+\end{flushleft}
+
+
 \end{document}
-
-
