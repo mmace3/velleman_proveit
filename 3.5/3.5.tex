@@ -1,0 +1,51 @@
+\documentclass{article}
+
+%\documentclass{amsart}
+%\documentclass{scrartcl}
+%\usepackage{changepage}
+%\usepackage{scrextend}
+
+\usepackage{amssymb,amsmath,amsthm}
+% amssymb has empty set symbo
+\usepackage{scrextend} % for \begin{addmargin}[0.55cm]{0cm} text \end{margin}
+
+\usepackage{mathrsfs} % for \mathscr{P}
+\usepackage{float}
+
+
+\newcommand{\n}{ \noindent }
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\G}{\mathcal{G}}
+%\newcommand{\pwset}{\mathcal{P}}
+\newcommand{\pwset}{\mathscr{P}}
+
+
+\newtheorem*{theorem}{Theorem}  % This enables \begin{theorem}
+
+%\DeclareFontFamily{U}{MnSymbolC}{}
+%\DeclareSymbolFont{MnSyC}{U}{MnSymbolC}{m}{n}
+%\DeclareFontShape{U}{MnSymbolC}{m}{n}{
+%  <-6>    MnSymbolC5
+%  <6-7>   MnSymbolC6
+%  <7-8>   MnSymbolC7
+%  <8-9>   MnSymbolC8
+%  <9-10>  MnSymbolC9
+%  <10-12> MnSymbolC10
+%  <12->   MnSymbolC12%
+%}{}
+%\DeclareMathSymbol{\powerset}{\mathord}{MnSyC}{180}
+
+%\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\begin{document}
+\section*{3.5.1}
+Suppose $A$, $B$, and $C$ are sets.
+
+\begin{theorem} $A \cap ( B \cup C ) \subseteq ( A \cap B ) \cup C $
+\end{theorem}
+\begin{proof}
+Let $x$ be arbitrary and suppose $x \in A \cap ( B \cup C )$. Thus $x \in A$ and $x \in B$ or $x \in C$. If $x \in C$ then $x \in ( A \cap B ) \cup C$. In the case where $x \in B$ it follows that $x \in A \cap B$ and therefore $x \in ( A \cap B ) \cup C$. Since $x$ was arbitrary we can conclude that $A \cap ( B \cup C ) \subseteq ( A \cap B ) \cup C $.
+\end{proof}
+
+
+\end{document}
