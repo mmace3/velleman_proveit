@@ -366,6 +366,19 @@ $( \bigcup_{i \in I} A_{i} ) \cap ( \bigcup_{i \in I} B_{i} ) = \{ 1 \} \neq \va
 Let $a$ and $b$ be arbitrary integers. Let $c = ab$ and note that since $a$ and $b$ are both integers then $c$ is also an integer. Since $a|c$ there exists an integer $k$ such that $ak = c = ab$. Similarly, since $b|c$ there exists an integer $j$ such that $bj = c = ab$. If we let $k = b$ then $ab = ab$ and if we let $j = a$ then $ba = ab$. Since $a$ and $b$ were arbitrary we can conclude that for all integers $a$ and $b$ there exists an integer $c$ such that $a|c$ and $b|c$.
 \end{proof}
 
+\section*{3.4.26}
 
+\subsection*{A}
+\begin{theorem} For every integer $n$, $15|n$ iff $3|n$ and $5|n$.
+\end{theorem}
+\begin{proof}
+$(\rightarrow)$ Let $n$ be an arbitrary integer. Suppose $15|n$, which means there exists an integer $k$ such that $15k = n$. Therefore, $5(3k) = n$ and since $3k$ is an integer we can conclude $5|n$. Also since $15k = n$, then $3(5k) = n$ and since $5k$ is an integer we can conclude $3|n$. Therefore, $3|n$ and $5|n$.
+
+$(\leftarrow)$ Now suppose $3|n$ and $5|n$. This means there is an integer $j$ such that $3j = n$ and there is another integer $k$ such that $5k = n$. Therefore, $15(2k-j) = 30k - 15j = 6n - 5n = n$. Since $2k-j$ is an integer we can conclude that $15|n$.
+
+\end{proof}
+
+\subsection{B}
+Consider the case where $n = 30$ and it is true that $6|n$ and $10|n$ but $60$ does not divide $n$. Therefore it is not true that for every integer $n$, $60|n$ iff $6|n$ and $10|n$.
 
 \end{document}
