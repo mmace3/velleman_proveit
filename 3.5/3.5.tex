@@ -47,5 +47,13 @@ Suppose $A$, $B$, and $C$ are sets.
 Let $x$ be arbitrary and suppose $x \in A \cap ( B \cup C )$. Thus $x \in A$ and $x \in B$ or $x \in C$. If $x \in C$ then $x \in ( A \cap B ) \cup C$. In the case where $x \in B$ it follows that $x \in A \cap B$ and therefore $x \in ( A \cap B ) \cup C$. Since $x$ was arbitrary we can conclude that $A \cap ( B \cup C ) \subseteq ( A \cap B ) \cup C $.
 \end{proof}
 
+\section*{3.5.2}
+Suppose $A$, $B$, and $C$ are sets.
+
+\begin{theorem} $(A \cup B) \setminus C \subseteq A \cup (B \setminus C)$
+\end{theorem}
+\begin{proof}
+Let $x$ be arbitrary and suppose $x \in ( A \cup B ) \setminus C$. Thus $x \notin C$ and $x \in A$ or $x \in B$. If $x \in A$ then $x \in A \cup ( B \setminus C )$. If $x \in B$ then if follows that $x \in B \setminus C$ and therefore $x \in A \cup ( B \setminus C )$. Since $x$ was arbitrary we can conclude $A \cap ( B \cup C ) \subseteq ( A \cap B ) \cup C$.
+\end{proof}
 
 \end{document}
