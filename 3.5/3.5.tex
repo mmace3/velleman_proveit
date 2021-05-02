@@ -56,4 +56,23 @@ Suppose $A$, $B$, and $C$ are sets.
 Let $x$ be arbitrary and suppose $x \in ( A \cup B ) \setminus C$. Thus $x \notin C$ and $x \in A$ or $x \in B$. If $x \in A$ then $x \in A \cup ( B \setminus C )$. If $x \in B$ then if follows that $x \in B \setminus C$ and therefore $x \in A \cup ( B \setminus C )$. Since $x$ was arbitrary we can conclude $A \cap ( B \cup C ) \subseteq ( A \cap B ) \cup C$.
 \end{proof}
 
+\section*{3.5.3}
+Suppose $A$ and $B$ are sets.
+
+\begin{theorem} $A \setminus ( A \setminus B ) = A \cap B$
+\end{theorem}
+
+\begin{proof}
+Let $x$ be arbitrary and suppose $x \in A \setminus ( A \setminus B )$. Then
+\begin{align*}
+x \in A \setminus ( A \setminus B ) ~ &\text{iff} ~ x \in A \land x \notin A \setminus B \\
+&\text{iff} ~  x \in A \land \lnot ( x \in A \land x \notin B ) \\
+&\text{iff} ~ x \in A \land ( x \notin A \lor x \in B ) \\
+&\text{iff} ~ ( x \in A \land x \notin A ) \lor ( x \in A \land x \in B ) \\
+&\text{iff} ~ x \in A \land x \in B \\
+&\text{iff} ~ x \in ( A \cap B )
+\end{align*}
+
+\end{proof}
+
 \end{document}
