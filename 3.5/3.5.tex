@@ -92,4 +92,16 @@ Suppose $A$ and $B$ are sets.
 Suppose $A \triangle B \subseteq A$. We will prove by contradiction. Let $x$ be arbitrary and suppose $x \in B$ and $x \notin A$. Since $x \in B$ and $x \notin A$ then $x \in A \triangle B$. Since $A \triangle B \subseteq A$, then $x \in A$. But this contradicts $x \notin A$. Therefore, if $x \in B$ then $x \in A$ and since $x$ was arbitrary we can conclude that $B \subseteq A$.
 \end{proof}
 
+
+\section*{3.5.6}
+Suppose $A$, $B$, and $C$ are sets.
+\begin{theorem} $A \cup C \subseteq B \cup C \iff A \setminus C \subseteq B \setminus C$.
+\end{theorem}
+
+\begin{proof}
+$(\rightarrow)$ Suppose $A$, $B$, and $C$ are sets. Suppose $(A \cup C) \subseteq (B \cup C)$. Let $x$ be arbitrary and suppose $c \in A \setminus C$, which means $x \in A$ and $x \notin C$. Since $x \in A$, then $x \in A \cup C$ and therefore $x \in B \cup C$. This means $x \in B$ or $x \in C$ and since $x \notin C$, it must be that $x \in B$. Now since $x \in B$ and $x \notin C$ then $x \in B \setminus C$. Therefore, if $x \in A \setminus C$ then $x \in B \setminus C$ and since $x$ was arbitrary we can conclude if $A \cup C \subseteq B \cup C$ then $A \setminus C \subseteq B \setminus C$.
+
+$(\leftarrow)$ Now suppose $A \setminus C \subseteq B \setminus C$. Let $x$ be arbitrary and suppose $x \in A \cup C$, which means $x \in A$ or $x \in C$. If $x \in C$ then $x \in B \cup C$ and since $x$ was arbitrary then $A \cup C \subseteq B \cup C$. In the case that $x \in A$, since $A \setminus C \subseteq B \setminus C$ then $x \in B$. Therefore, $x \in B \cup C$ and since $x$ was arbitrary then $A \cup C \subseteq B \cup C$.
+\end{proof}
+
 \end{document}
