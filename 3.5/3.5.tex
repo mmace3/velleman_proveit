@@ -80,7 +80,16 @@ x \in A \setminus ( A \setminus B ) ~ &\text{iff} ~ x \in A \land x \notin A \se
 
 \begin{proof}
 Suppose $A \cap C \subseteq B \cap C$ and $A \cup C \subseteq B \cup C$. Let $x$ be arbitrary and suppose $x \in A$. Thus $x \in A \cup C$ and it follows that $x \in B \cup C$. Now if $x \in B \cup C$ then either  $x \in B$ or $x \in C$. If $x \in B$ then since $x$ was arbitrary we can conclude $A \subseteq B$. In the case that $x \in C$, then $x \in A \cap C$ and it follows that $x \in B \cap C$. Therefore $x \in C$ and $x \in B$. Thus, if $x \in A$ then $x \in B$ and since $x$ was arbitrary we can conclude $A \subseteq B$. 
+\end{proof}
 
+\section*{3.5.5}
+Suppose $A$ and $B$ are sets.
+
+\begin{theorem} If $A \triangle B \subseteq A$ then $B \subseteq A$.
+\end{theorem}
+
+\begin{proof}
+Suppose $A \triangle B \subseteq A$. We will prove by contradiction. Let $x$ be arbitrary and suppose $x \in B$ and $x \notin A$. Since $x \in B$ and $x \notin A$ then $x \in A \triangle B$. Since $A \triangle B \subseteq A$, then $x \in A$. But this contradicts $x \notin A$. Therefore, if $x \in B$ then $x \in A$ and since $x$ was arbitrary we can conclude that $B \subseteq A$.
 \end{proof}
 
 \end{document}
