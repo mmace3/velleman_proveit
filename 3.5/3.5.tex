@@ -112,4 +112,14 @@ $(\leftarrow)$ Now suppose $A \setminus C \subseteq B \setminus C$. Let $x$ be a
 Let $A$ and $B$ be arbitrary sets. Let $M$ be arbitrary and suppose $M \in \pwset (A) \cup \pwset (B)$. Thus $M \in \pwset (A)$ or $M \in \pwset (B)$, which means $M \subseteq A$ or $M \subseteq B$. In the case where $M \subseteq A$, let $x$ be an arbitrary member of $M$ and it follows that $x \in A$. Since $x \in A$ then $x \in A \cup B$ and because $x$ was arbitrary we can conclude $M \subseteq A \cup B$ and therefore $M \in \pwset (A \cup B)$. In the case where $M \subseteq B$, let $x$ be an arbitrary member of $M$ and it follows that $x \in B$. Since $x \in B$ then $x \in A \cup B$ and because $x$ was arbitrary we can conclude $M \subseteq A \cup B$ and therefore $M \in \pwset (A \cup B)$.
 \end{proof}
 
+\section*{3.5.8}
+\begin{theorem} For any sets $A$ and $B$, if $\pwset (A) \cup \pwset (B) = \pwset (A \cup B)$ then either $A \subseteq B$ or $B \subseteq A$.
+\end{theorem}
+
+\begin{proof}
+
+We will prove the contrapositive. Since we proved that $\pwset (A) \cup \pwset (B) \subseteq \pwset (A \cup B)$ in exercise 3.5.7, we must show that $\pwset (A \cup B) \not\subseteq \pwset (A) \cup \pwset (B)$ to prove our goal that $\pwset (A) \cup \pwset (B) \neq \pwset (A \cup B)$. Suppose $A \not\subseteq B$ and $B \not\subseteq A$. This means there is an element $x \in A \setminus B$ and an element $y \in B \setminus A$. Since $x \in A$ and $y \in B$ then both $x$ and $y$ are in $A \cup B$ and therefore the set $\{ x, y \}$ is in $\pwset (A \cup B)$ but not in $\pwset (A)$ or $\pwset (B)$. Thus $\pwset (A \cup B) \not\subseteq \pwset (A) \cup \pwset (B)$.
+
+\end{proof}
+
 \end{document}
