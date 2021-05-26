@@ -101,7 +101,15 @@ Suppose $A$, $B$, and $C$ are sets.
 \begin{proof}
 $(\rightarrow)$ Suppose $A$, $B$, and $C$ are sets. Suppose $(A \cup C) \subseteq (B \cup C)$. Let $x$ be arbitrary and suppose $c \in A \setminus C$, which means $x \in A$ and $x \notin C$. Since $x \in A$, then $x \in A \cup C$ and therefore $x \in B \cup C$. This means $x \in B$ or $x \in C$ and since $x \notin C$, it must be that $x \in B$. Now since $x \in B$ and $x \notin C$ then $x \in B \setminus C$. Therefore, if $x \in A \setminus C$ then $x \in B \setminus C$ and since $x$ was arbitrary we can conclude if $A \cup C \subseteq B \cup C$ then $A \setminus C \subseteq B \setminus C$.
 
-$(\leftarrow)$ Now suppose $A \setminus C \subseteq B \setminus C$. Let $x$ be arbitrary and suppose $x \in A \cup C$, which means $x \in A$ or $x \in C$. If $x \in C$ then $x \in B \cup C$ and since $x$ was arbitrary then $A \cup C \subseteq B \cup C$. In the case that $x \in A$, since $A \setminus C \subseteq B \setminus C$ then $x \in B$. Therefore, $x \in B \cup C$ and since $x$ was arbitrary then $A \cup C \subseteq B \cup C$.
+$(\leftarrow)$ Now suppose $A \setminus C \subseteq B \setminus C$. Let $x$ be arbitrary and suppose $x \in A \cup C$, which means $x \in A$ or $x \in C$. If $x \in C$ then $x \in B \cup C$ and since $x$ was arbitrary then $A \cup C \subseteq B \cup C$. In the case that $x \in A$, since $A \setminus C \subseteq B \setminus C$ then $x \in B$. Therefore, $x \in B \cup C$ and since $x$ was arbitrary then $A \cup C \subseteq B \cup C$.  
+\end{proof}
+
+\section*{3.5.7}
+\begin{theorem} For any sets $A$ and $B$, $\pwset (A) \cup \pwset (B) \subseteq \pwset (A \cup B)$
+\end{theorem}
+
+\begin{proof}
+Let $A$ and $B$ be arbitrary sets. Let $M$ be arbitrary and suppose $M \in \pwset (A) \cup \pwset (B)$. Thus $M \in \pwset (A)$ or $M \in \pwset (B)$, which means $M \subseteq A$ or $M \subseteq B$. In the case where $M \subseteq A$, let $x$ be an arbitrary member of $M$ and it follows that $x \in A$. Since $x \in A$ then $x \in A \cup B$ and because $x$ was arbitrary we can conclude $M \subseteq A \cup B$ and therefore $M \in \pwset (A \cup B)$. In the case where $M \subseteq B$, let $x$ be an arbitrary member of $M$ and it follows that $x \in B$. Since $x \in B$ then $x \in A \cup B$ and because $x$ was arbitrary we can conclude $M \subseteq A \cup B$ and therefore $M \in \pwset (A \cup B)$.
 \end{proof}
 
 \end{document}
