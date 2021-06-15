@@ -165,8 +165,13 @@ $(\leftarrow)$ Now suppose $| x - 4 | > 2$. Our goal $| 2x - 6 | > x$ means that
 $(\rightarrow)$ Suppose $a$ and $b$ are arbitrary real numbers and that $| a | \leq b$. There are two cases to consider: $a \geq 0$ and $a < 0$. If $a \geq 0$ then $| a | = a \leq b$. It follows that $-b \leq -a$ and since $a \geq 0$ then $-a \leq a$. Therefore, $-b \leq -a \leq a \leq b$ and $-b \leq a \leq b$. Now in the case that $a < 0$ then $| a | = -a \leq b$. It follows that $-b \leq a$ and since $a < 0$ then $-a > a$ or $a < -a$. Therefore $-b \leq a < -a \leq b$ and $-b \leq a \leq b$.
 
 $(\leftarrow)$ Now suppose $-b \leq a \leq b$ and therefore $a \leq b$. Now we must prove that $-a \leq b$ to complete the proof. If we subtract $a$ from both sides of $-b \leq a$ and add $b$ to both sides we have $-a \leq b$. 
-
 \end{proof}
 
+\section*{3.5.13}
+\begin{theorem} For every integer $x$, $x^2 + x$ is even.
+\end{theorem}
 
+\begin{proof}
+Let $x$ be an arbitrary integer. There are two cases to consider: $x$ is even or $x$ is odd. If $x$ is even then there exists an integer $k$ such that $x = 2k$. Plugging in $2k$ for $x$ in $x^2 + x$ we have $x^2 + x = (2k)^2 + 2k = 4k^2 + 2k = 2(2k^2 + k)$. Since $2k^2 + k$ is an integer then $x^2 + x$ is even. In the case that $x$ is odd there is a $j$ such that $x = 2j + 1$. Plugging in $2j +1$ for $x$ in $x^2 + x$ we have $x^2 + x = (2j + 1)^2 + (2j + 1) = (4j^2 + 4j + 1) + (2j + 1) = 4j^2 + 6j + 2 = 2(2j^2 + 3j + 1)$. Since $2j^2 + 3j + 1$ is an integer, $x^2 + x$ is even.
+\end{proof}
 \end{document}
