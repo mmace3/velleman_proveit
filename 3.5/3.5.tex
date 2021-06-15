@@ -155,7 +155,18 @@ Suppose that $x$ is an arbitrary real number and that $ | x - 3 | > 3 $. Then ei
 $(\rightarrow)$ Let $x$ be an arbitrary real number and suppose $| 2x - 6 | > x $. Our goal $| x - 4 | > 2$ means that either $x - 4 > 2$ or $4 - x > 2$. Since $ | 2x - 6 | > 2 $ then either $2x - 6 > x$ or $6 - 2x > x$. If $2x - 6 > x$ then it follows that $x - 4 > 2$. Now if $6 - 2x > x$ then if follows that $4 - x >2$. 
 
 $(\leftarrow)$ Now suppose $| x - 4 | > 2$. Our goal $| 2x - 6 | > x$ means that either $2x - 6 > x$ or $6 - 2x > x$. Since $| x - 4 | > 2$ then either $x - 4 > 2$ or $4 - x > 2$. If $x - 4 > 2$ then it follows that $2x - 6 > x$. In the case that $4 - x > 2$ then it follows that $6 - 2x > x$.
+\end{proof}
+
+\section*{3.5.12}
+\begin{theorem} For all real numbers $a$ and $b$, $| a | \leq b$ if and only if $-b \leq a \leq b$.
+\end{theorem}
+
+\begin{proof}
+$(\rightarrow)$ Suppose $a$ and $b$ are arbitrary real numbers and that $| a | \leq b$. There are two cases to consider: $a \geq 0$ and $a < 0$. If $a \geq 0$ then $| a | = a \leq b$. It follows that $-b \leq -a$ and since $a \geq 0$ then $-a \leq a$. Therefore, $-b \leq -a \leq a \leq b$ and $-b \leq a \leq b$. Now in the case that $a < 0$ then $| a | = -a \leq b$. It follows that $-b \leq a$ and since $a < 0$ then $-a > a$ or $a < -a$. Therefore $-b \leq a < -a \leq b$ and $-b \leq a \leq b$.
+
+$(\leftarrow)$ Now suppose $-b \leq a \leq b$ and therefore $a \leq b$. Now we must prove that $-a \leq b$ to complete the proof. If we subtract $a$ from both sides of $-b \leq a$ and add $b$ to both sides we have $-a \leq b$. 
 
 \end{proof}
+
 
 \end{document}
