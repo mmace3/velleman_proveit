@@ -174,4 +174,13 @@ $(\leftarrow)$ Now suppose $-b \leq a \leq b$ and therefore $a \leq b$. Now we m
 \begin{proof}
 Let $x$ be an arbitrary integer. There are two cases to consider: $x$ is even or $x$ is odd. If $x$ is even then there exists an integer $k$ such that $x = 2k$. Plugging in $2k$ for $x$ in $x^2 + x$ we have $x^2 + x = (2k)^2 + 2k = 4k^2 + 2k = 2(2k^2 + k)$. Since $2k^2 + k$ is an integer then $x^2 + x$ is even. In the case that $x$ is odd there is a $j$ such that $x = 2j + 1$. Plugging in $2j +1$ for $x$ in $x^2 + x$ we have $x^2 + x = (2j + 1)^2 + (2j + 1) = (4j^2 + 4j + 1) + (2j + 1) = 4j^2 + 6j + 2 = 2(2j^2 + 3j + 1)$. Since $2j^2 + 3j + 1$ is an integer, $x^2 + x$ is even.
 \end{proof}
+
+\section*{3.5.14}
+\begin{theorem} For every integer $x$, the remainder when $x^4$ is divided by $8$ is either $0$ or $1$.
+\end{theorem}
+
+\begin{proof}
+Suppose $x$ is an integer and there exists an integer $k$ such that $8k = x^4$. Since $x$ is an integer, $x$ is either even or odd. If $x$ is even then there exists an integer $m$ such that $x=2m$. Then $8k = (2m)^4 = 16m^4$ and $k = 2m^4$ r $0$. In the case that $x$ is odd, then there exists an integer $m$ such that $x = 2m + 1$. Then $8k = (2m+1)^4 = 16x^4 + 32x^3 + 24x^2 + 8x + 1$ and $k = 2x^4 + 4x^3 + 3x^2 + x$ r $1$. Therefore, when $x^4$ is divided by 8 the remainder is either $0$ or $1$.
+\end{proof}
+
 \end{document}
