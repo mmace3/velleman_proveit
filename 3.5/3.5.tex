@@ -183,4 +183,17 @@ Let $x$ be an arbitrary integer. There are two cases to consider: $x$ is even or
 Suppose $x$ is an integer and there exists an integer $k$ such that $8k = x^4$. Since $x$ is an integer, $x$ is either even or odd. If $x$ is even then there exists an integer $m$ such that $x=2m$. Then $8k = (2m)^4 = 16m^4$ and $k = 2m^4$ r $0$. In the case that $x$ is odd, then there exists an integer $m$ such that $x = 2m + 1$. Then $8k = (2m+1)^4 = 16x^4 + 32x^3 + 24x^2 + 8x + 1$ and $k = 2x^4 + 4x^3 + 3x^2 + x$ r $1$. Therefore, when $x^4$ is divided by 8 the remainder is either $0$ or $1$.
 \end{proof}
 
+\section*{3.4.15}
+Suppose $\F$ and $\G$ are nonempty families of sets.
+
+\begin{theorem} $\cup ( \F \cup \G ) = (\cup \F) \cup (\cup \G)$
+\end{theorem}
+
+\begin{proof}
+$(\rightarrow)$ Suppose $x \in \cup(\F \cup \G)$, which means there is a set in $\F \cup \G$ that contains $x$. Thus the set that contains $x$ is in $\F$ or $\G$. If the set that contains $x$ is in $\F$ then $x \in \cup \F$ and $x \in (\cup \F) \cup (\cup \G)$. In the case that the set that contains $x$ is in $\G$, then $x \in \cup \G$ and $x \in (\cup \F) \cup (\cup \G)$ 
+\end{proof}
+
+$(\leftarrow)$ Now suppose $x \in (\cup F) \cup (\cup G)$, which means there is a set in $\F$ that contains $x$ or a set in $\G$ that contains $x$. If there is a set in $\F$ that contains $x$, and this same set is in $\F \cup \G$. Thus there is a set in $\F \cup \G$ that contains $x$. In the case that there is a set in $\G$ that contains $x$, then this set is in $\F \cup \G$. Thus there is a set in $\F \cup \G$ that contains $x$. Therefore $x \in \cup (\F \cup \G)$.
+
+
 \end{document}
