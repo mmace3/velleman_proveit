@@ -191,9 +191,22 @@ Suppose $\F$ and $\G$ are nonempty families of sets.
 
 \begin{proof}
 $(\rightarrow)$ Suppose $x \in \cup(\F \cup \G)$, which means there is a set in $\F \cup \G$ that contains $x$. Thus the set that contains $x$ is in $\F$ or $\G$. If the set that contains $x$ is in $\F$ then $x \in \cup \F$ and $x \in (\cup \F) \cup (\cup \G)$. In the case that the set that contains $x$ is in $\G$, then $x \in \cup \G$ and $x \in (\cup \F) \cup (\cup \G)$ 
+
+
+$(\leftarrow)$ Now suppose $x \in (\cup F) \cup (\cup G)$, which means there is a set in $\F$ that contains $x$ or a set in $\G$ that contains $x$. If there is a set in $\F$ that contains $x$, and this same set is in $\F \cup \G$. Thus there is a set in $\F \cup \G$ that contains $x$. In the case that there is a set in $\G$ that contains $x$, then this set is in $\F \cup \G$. Thus there is a set in $\F \cup \G$ that contains $x$. Therefore $x \in \cup (\F \cup \G)$. \\
+
 \end{proof}
 
-$(\leftarrow)$ Now suppose $x \in (\cup F) \cup (\cup G)$, which means there is a set in $\F$ that contains $x$ or a set in $\G$ that contains $x$. If there is a set in $\F$ that contains $x$, and this same set is in $\F \cup \G$. Thus there is a set in $\F \cup \G$ that contains $x$. In the case that there is a set in $\G$ that contains $x$, then this set is in $\F \cup \G$. Thus there is a set in $\F \cup \G$ that contains $x$. Therefore $x \in \cup (\F \cup \G)$.
+Alternate proof?
+\begin{proof}
+\begin{align*}
+x \in \cup (\F \cup \G) ~ &\text{iff} \\
+\exists M \in \F \cup \G (x \in M) ~ &\text{iff} \\
+\exists M \in \F (x \in M) \lor \exists M \in \G (x \in M) ~ &\text{iff} \\
+x \in \cup \F \lor x \in \cup \G ~ &\text{iff} \\
+x \in (\cup \F) \cup (\cup \G)
+\end{align*}
+\end{proof}
 
 
 \end{document}
