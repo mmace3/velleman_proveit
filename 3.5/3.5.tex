@@ -183,7 +183,7 @@ Let $x$ be an arbitrary integer. There are two cases to consider: $x$ is even or
 Suppose $x$ is an integer and there exists an integer $k$ such that $8k = x^4$. Since $x$ is an integer, $x$ is either even or odd. If $x$ is even then there exists an integer $m$ such that $x=2m$. Then $8k = (2m)^4 = 16m^4$ and $k = 2m^4$ r $0$. In the case that $x$ is odd, then there exists an integer $m$ such that $x = 2m + 1$. Then $8k = (2m+1)^4 = 16x^4 + 32x^3 + 24x^2 + 8x + 1$ and $k = 2x^4 + 4x^3 + 3x^2 + x$ r $1$. Therefore, when $x^4$ is divided by 8 the remainder is either $0$ or $1$.
 \end{proof}
 
-\section*{3.4.15}
+\section*{3.5.15}
 Suppose $\F$ and $\G$ are nonempty families of sets.
 
 \begin{theorem} $\cup ( \F \cup \G ) = (\cup \F) \cup (\cup \G)$
@@ -206,6 +206,19 @@ x \in \cup (\F \cup \G) ~ &\text{iff} \\
 x \in \cup \F \lor x \in \cup \G ~ &\text{iff} \\
 x \in (\cup \F) \cup (\cup \G)
 \end{align*}
+\end{proof}
+
+\section*{3.5.16}
+Suppose $\F$ is a nonempty family of sets and $B$ is a set.
+
+\subsection*{A}
+\begin{theorem} $B \cup (\cup \F) \subseteq \cup (\F \cup \{B\})$
+\end{theorem}
+
+\begin{proof}
+$(\rightarrow)$ Suppose $x$ is arbitrary and $x \in B \cup (\cup \F)$. Then $x \in B$ or $x \in \cup \F$. If $x \in B$ then because $B \in \F \cup \{B\}$, it follows that $x \in \cup (\F \cup \{B\})$. In the case that $x \in \cup \F$, there is a set $M \in \F$ such that $x \in M$. Since $M \in \F$ then $M \in \F \cup \{B\}$ and therefore $x \in \cup (\F \cup \{B\})$.
+
+$(\leftarrow)$ Now suppose $x \in \cup (\F \cup \{B\})$. Then there is a set $M$ such that $x \in M$ and $M \in \cup (\F \cup \{B\})$, which means $M \in \F$ or $M \in \{B\}$. If $M \in \F$ then it follows that $x \in \cup \F$ and thus $x \in B \cup (\cup \F)$. In the case that $M \in \{B\}$ then it follows that $x \in B$ and thus $x \in B \cup (\cup \F)$.  
 \end{proof}
 
 
