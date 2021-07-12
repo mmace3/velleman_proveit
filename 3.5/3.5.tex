@@ -218,7 +218,27 @@ Suppose $\F$ is a nonempty family of sets and $B$ is a set.
 \begin{proof}
 $(\rightarrow)$ Suppose $x$ is arbitrary and $x \in B \cup (\cup \F)$. Then $x \in B$ or $x \in \cup \F$. If $x \in B$ then because $B \in \F \cup \{B\}$, it follows that $x \in \cup (\F \cup \{B\})$. In the case that $x \in \cup \F$, there is a set $M \in \F$ such that $x \in M$. Since $M \in \F$ then $M \in \F \cup \{B\}$ and therefore $x \in \cup (\F \cup \{B\})$.
 
-$(\leftarrow)$ Now suppose $x \in \cup (\F \cup \{B\})$. Then there is a set $M$ such that $x \in M$ and $M \in \cup (\F \cup \{B\})$, which means $M \in \F$ or $M \in \{B\}$. If $M \in \F$ then it follows that $x \in \cup \F$ and thus $x \in B \cup (\cup \F)$. In the case that $M \in \{B\}$ then it follows that $x \in B$ and thus $x \in B \cup (\cup \F)$.  
+$(\leftarrow)$ Now suppose $x \in \cup (\F \cup \{B\})$. Then there is a set $M$ such that $x \in M$ and $M \in (\F \cup \{B\})$, which means $M \in \F$ or $M \in \{B\}$. If $M \in \F$ then it follows that $x \in \cup \F$ and thus $x \in B \cup (\cup \F)$. In the case that $M \in \{B\}$ then it follows that $x \in B$ and thus $x \in B \cup (\cup \F)$.  
+\end{proof}
+
+\subsection*{B}
+\begin{theorem} $B \cup (\cap \F) = \bigcap_{A \in \F} (B \cup A)$
+\end{theorem}
+
+\begin{proof}
+$(\rightarrow)$ Let $x$ be arbitrary and suppose $x \in B \cup (\cap \F)$. Then $x \in B$ or $x \in \cap \F$. If $x \in B$, then $x \in B \cup A$ for any set $A$ and thus $x \in \bigcap_{A \in \F} (B \cup A)$. In the case that $x \in \cap \F$, then $x$ is in every set $A \in \F$ and so $x \in \bigcap_{A \in \F} A$. Therefore $x \in \bigcap_{A \in \F} (B \cup A)$. Since $x$ was arbitrary then $B \cup (\cap \F) \subseteq \bigcap_{A \in \F} (B \cup A)$.
+
+$(\leftarrow)$ Now suppose $x \in \bigcap_{A \in \F} (B \cup A)$. Thus $x \in B$ or $x \in A$ for all $A \in \F$. If $x \in B$ then $x \in B \cup (\cap \F)$. If $x \in A$ for all $A \in \F$ then $x \in \cap \F$ and therefore $x \in B \cup (\cap \F)$. Since $x$ was arbitrary then $\bigcap_{A \in \F} (B \cup A) \subseteq B \cup (\cap \F)$.
+\end{proof}
+
+\subsection*{C}
+\begin{theorem} $B \cap ( \cap \F ) = \bigcap_{A \in \F} ( B \cap A )$
+\end{theorem}
+
+\begin{proof}
+$(\rightarrow)$ Let $x$ be arbitrary and suppose $x \in B \cap ( \cap \F )$, which means $x \in B$ and for all $A \in \F$, $x \in A$. Thus $x \in A \cap B$ and since $x \in A$ for all $A \in \F$, then $x \in \bigcap_{A \in \F} (A \cap B)$. Since $x$ was arbitrary, we conclude $B \cap ( \cap \F ) \subseteq \bigcap_{ A \in \F } ( B \cap A )$.
+
+$(\leftarrow)$ Now suppose $x \in \bigcap_{A \in \F} (A \cap B)$, which means for all $A \in \F$, $x \in A \cap B$. Therefore $x in B$ and for all $A \in \F$, $x \in A$ and thus $x \in \cap \F$. Since $x$ was arbitrary we conclude $\bigcap_{A \in \F} ( B \cap A ) \subseteq B \cap ( \cap \F )$.
 \end{proof}
 
 
