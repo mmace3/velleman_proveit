@@ -16,6 +16,8 @@
 \newcommand{\n}{ \noindent }
 \newcommand{\F}{\mathcal{F}}
 \newcommand{\G}{\mathcal{G}}
+
+
 %\newcommand{\pwset}{\mathcal{P}}
 \newcommand{\pwset}{\mathscr{P}}
 
@@ -238,8 +240,17 @@ $(\leftarrow)$ Now suppose $x \in \bigcap_{A \in \F} (B \cup A)$. Thus $x \in B$
 \begin{proof}
 $(\rightarrow)$ Let $x$ be arbitrary and suppose $x \in B \cap ( \cap \F )$, which means $x \in B$ and for all $A \in \F$, $x \in A$. Thus $x \in A \cap B$ and since $x \in A$ for all $A \in \F$, then $x \in \bigcap_{A \in \F} (A \cap B)$. Since $x$ was arbitrary, we conclude $B \cap ( \cap \F ) \subseteq \bigcap_{ A \in \F } ( B \cap A )$.
 
-$(\leftarrow)$ Now suppose $x \in \bigcap_{A \in \F} (A \cap B)$, which means for all $A \in \F$, $x \in A \cap B$. Therefore $x in B$ and for all $A \in \F$, $x \in A$ and thus $x \in \cap \F$. Since $x$ was arbitrary we conclude $\bigcap_{A \in \F} ( B \cap A ) \subseteq B \cap ( \cap \F )$.
+$(\leftarrow)$ Now suppose $x \in \bigcap_{A \in \F} (A \cap B)$, which means for all $A \in \F$, $x \in A \cap B$. Therefore $x \in B$ and for all $A \in \F$, $x \in A$ and thus $x \in \cap \F$. Since $x$ was arbitrary we conclude $\bigcap_{A \in \F} ( B \cap A ) \subseteq B \cap ( \cap \F )$.
 \end{proof}
 
+\section*{ 3.5.17 }
+
+\begin{theorem}
+Suppose $\F$, $\G$, and $\mathcal{H}$ are nonempty families of sets and for every $A \in \F$ and every $B \in \G$, $A \cup B \in \mathcal{H}$, then $\cap \mathcal{H}$ is a subset of $( \cap \F ) \cup ( \cap \G )$. 
+\end{theorem}
+
+\begin{proof}
+Suppose $A$ and $B$ are arbitrary sets, $A \in \F$, $B \in \G$, and $A \cup B \in \mathcal{H}$. Let $x$ be arbitrary and suppose $x \in \cap \mathcal{H}$, which means $x$ is in every set in $\mathcal{H}$. Since $A \cup B \in \mathcal{H}$, it follows that $x \in A$ or $x \in B$. If $x \in A$, then since $A$ is an arbitrary set in $\F$, then $x \in \cap \F$. If $x \in B$, then since $B$ is an arbitrary set in $\G$, then $x \in \cap \G$. Therefore, $ x \in ( \cap \F ) \cup ( \cap \G )$ and since $x$ was arbitrary we conclude that $\cap \mathcal{H} \subseteq ( \cap \F ) \cup ( \cap \G )$.
+\end{proof}
 
 \end{document}
