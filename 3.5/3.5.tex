@@ -267,7 +267,17 @@ x \in A \triangle B ~ &\text{iff} ~ x \in (A \cup B) \setminus (A \cap B)\\
 &\text{iff} ~ (x \notin B \implies x \in A) \land (x \in A \implies x \notin B) \\
 &\text{iff} ~ x \in A \iff x \notin B
 \end{align*}
+\end{proof}
 
+
+\section*{3.5.19}
+\begin{theorem} Suppose $A$, $B$, and $C$ are sets. Then $A \triangle B$ and $C$ are disjoint if and only if $A \cap C = B \cap C$.
+\end{theorem}
+
+\begin{proof}
+$(\rightarrow)$ We will prove by contradiction. Suppose $(A \triangle B) \cap C = \varnothing$. Recall that $x \in A \triangle B$ means that $x \in A \setminus B$ or $x \in B \setminus A$. Now suppose $A \cap C \neq B \cap C$, which means $A \cap C \not\subseteq B \cap C$ or $B \cap C \not\subseteq A \cap C$. If $A \cap C \not\subseteq B \cap C$ then there exists an $x$ such that $x \in A \cap C$ and $x \notin B \cap C$. Thus $x \in C$ and $x \in A \setminus B$, which also means $x \in A \triangle B$. However this contradicts our assumption that $(A \triangle B) \cap C = \varnothing$. In the case that $B \cap C \not\subseteq A \cap C$, there exists an $x$ such that $x \in B \cap C$ and $x \notin A \cap C$. Thus $x \in C$ and $x \in B \setminus A$, which also means $x \in A \triangle B$. However this contradicts our assumption that $(A \triangle B) \cap C = \varnothing$.
+
+$(\leftarrow)$ We will prove by contradiction. Suppose $A \cap C = B \cap C$. Now suppose that $(A \triangle B) \cap C \neq \varnothing$, which means there exists an $x$ such that $x \in (A \setminus B) \cap C$ or $x \in (B \setminus A) \cap C$. If $ x \in (A \setminus B) \cap C$, then $x \in A \setminus B$, which means $x \in A$ and $x \notin B$. Since $x \in A$ and $x \in C$, then $x \in A \cap C$. If follows that $x \in B \cap C$ because $A \cap C = B \cap C$, however this contradicts our assumption that $x \notin B$. In the case that $x in (B \setminus A) \cap C$, $x \in B \setminus A$. Thus $x \in B$ and $x \notin A$. Since $x \in B$ and $x \in C$, then $x \in B \cap C$. It follows that $x \in A \cap C$ because $A \cap C = B \cap C$. However, this contradicts our assumption that $x \notin A$. 
 \end{proof}
 
 
