@@ -253,4 +253,22 @@ Suppose $\F$, $\G$, and $\mathcal{H}$ are nonempty families of sets and for ever
 Suppose $A$ and $B$ are arbitrary sets, $A \in \F$, $B \in \G$, and $A \cup B \in \mathcal{H}$. Let $x$ be arbitrary and suppose $x \in \cap \mathcal{H}$, which means $x$ is in every set in $\mathcal{H}$. Since $A \cup B \in \mathcal{H}$, it follows that $x \in A$ or $x \in B$. If $x \in A$, then since $A$ is an arbitrary set in $\F$, then $x \in \cap \F$. If $x \in B$, then since $B$ is an arbitrary set in $\G$, then $x \in \cap \G$. Therefore, $ x \in ( \cap \F ) \cup ( \cap \G )$ and since $x$ was arbitrary we conclude that $\cap \mathcal{H} \subseteq ( \cap \F ) \cup ( \cap \G )$.
 \end{proof}
 
+\section*{3.5.18}
+\begin{theorem} Suppose $A$ and $B$ are sets. Then $\forall x (x \in A \triangle B \iff (x \in A \iff x \notin B))$
+\end{theorem}
+
+\begin{proof}
+Let $x$ be arbitrary and suppose $x \in A \triangle B$. Then
+
+\begin{align*}
+x \in A \triangle B ~ &\text{iff} ~ x \in (A \cup B) \setminus (A \cap B)\\
+&\text{iff} ~ (x \in A \cup B) \land x \notin (A \cap B)  \\
+&\text{iff} ~ (x \in A \lor x \in B) \land (x \notin A \lor x \notin B) \\
+&\text{iff} ~ (x \notin B \implies x \in A) \land (x \in A \implies x \notin B) \\
+&\text{iff} ~ x \in A \iff x \notin B
+\end{align*}
+
+\end{proof}
+
+
 \end{document}
