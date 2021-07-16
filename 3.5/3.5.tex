@@ -290,5 +290,15 @@ $(\rightarrow)$ Suppose $A \triangle B \subseteq C$. Let $x$ be arbitrary and su
 $(\leftarrow)$ Now suppose $A \cup C = B \cup C$ and $x \in A \triangle B$. By the definition of symmetrical difference, $x \in A \setminus B$ or $x \in B \setminus A$. If $x \in A \setminus B$ then $x \in A$ and $x \notin B$. It follows that $x \in A \cup C$ and therefore $x \in B \cup C$. Since $x \in B \cup C$ and $x \notin B$, then $x \in C$. In the case that $x \in B \setminus A$, $x \in B$ and $x \notin A$. It follows that $x \in B \cup C$ and therefore $x \in A \cup C$. Since $x \in A \cup C$ and $x \notin A$, then $x \in C$.
 \end{proof}
 
+\section*{3.5.21}
+\begin{theorem} Suppose $A$, $B$, and $C$ are sets. Then $C \subseteq A \triangle B$ if and only if $C \subseteq A \cup B$ and $A \cap B \cap C = \varnothing$.
+\end{theorem}
+
+\begin{proof}
+$(\rightarrow)$ Suppose $C \subseteq A \triangle B$. To show that $C \subseteq A \cup B$, let $x$ be arbitrary and suppose $x \in C$. Since $x \in C$ then $x \in A \triangle B$. By the definition of symmetric difference, $x \in A \cup B$ and $x \notin A \cap B$. Thus if $x \in C$ then $x \in A \cup B$. To prove that $A \cap B \cap C = \varnothing$ we will used proof by contradiction. Suppose there is an element $y$ such that $y \in A$, $y \in B$ and $y \in C$. Since $y \in C$ then $y \in A \triangle B$. As noted earlier, if $y \in A \triangle B$ then $y \notin A \cap B$; however, this contradicts our assumption that $y \in A$ and $y \in B$. Thus, it must be that $A \cap B \cap C = \varnothing$.
+
+$(\leftarrow)$ Now suppose $C \subseteq A \cup B$ and $A \cap B \cap C = \varnothing$. Let $x$ be arbitrary and suppose $x \in C$. It follows that $x \in A \cup B$. Since $x \in C$ and $A \cap B \cap C = \varnothing$, then $x \notin A \cap B$. Now since $x \in A \cup B$ and $x \notin A \cap B$, then $x \in A \triangle B$. 
+\end{proof}
+
 
 \end{document}
