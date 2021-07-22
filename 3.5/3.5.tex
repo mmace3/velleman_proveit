@@ -327,8 +327,74 @@ Case 2: $x \in A \setminus C$ and $x \notin B$. Since $x \in A \setminus C$ then
 Case 3: $x \in C \setminus A$ and $x \in B$. Since $x \in C \setminus A$ then $x \in C$ and $x \in A$. Therefore $x \in B$ and $x \notin A$, and therefore $x \in A \triangle B$. Therefore, if $x \in A \triangle C$ then $x \in (A \triangle B) \cup (B \triangle C)$ and since $x$ was arbitrary we can conclude that $A \triangle C \subseteq (A \triangle B) \cup (B \triangle C)$.
 
 Case 4: $x \in C \setminus A$ and $x \notin B$. Since $x \in C \setminus A$ then $x \in C$ and $x \notin A$. Therefore $x \in C \setminus B$ and thus $x \in B \triangle C$. Therefore, if $x \in A \triangle C$ then $x \in (A \triangle B) \cup (B \triangle C)$ and since $x$ was arbitrary we can conclude that $A \triangle C \subseteq (A \triangle B) \cup (B \triangle C)$. 
-
-
 \end{proof}
+
+\section*{3.5.23}
+
+Suppose $A$, $B$, and $C$ are sets.
+
+\subsection*{A}
+\begin{theorem} $( A \cup B ) \triangle C \subseteq (A \triangle C) \cup (B \triangle C)$
+\end{theorem}
+
+\begin{proof}
+Suppose $x$ is arbitrary and $x \in (A \cup B) \triangle C$. Thus $x \in A \setminus C$ or $x \in C \setminus (A \cup B)$, and we have 4 cases to consider:
+
+Case 1: $x \in A$, $x \notin B$, and $x \notin C$. Since $x \in A$ and $x \notin C$ then $x \in A \setminus C$ and $x \in A \triangle C$. Therefore if $x \in (A \cup B) \triangle C$ then $x \in (A \triangle C) \cup (B \triangle C)$ and since $x$ was arbitrary we can conclude $(A \cup B) \triangle C \subseteq (A \triangle C) \cup (B \triangle C)$.
+
+Case 2: $x \in B$, $x \notin A$, and $x \notin C$. Since $x \in B$ and $x \notin C$ then $x \in B \setminus C$ and $x \in B \triangle C$. Therefore if $x \in (A \cup B) \triangle C$ then $x \in (A \triangle C) \cup (B \triangle C)$ and since $x$ was arbitrary we can conclude $(A \cup B) \triangle C \subseteq (A \triangle C) \cup (B \triangle C)$.
+
+Case 3: $x \in A$, $x \in B$, and $x \notin C$. Since $x \in B$ and $x \notin C$ then $x \in B \setminus C$ and $x \in B \triangle C$. Since $x \in A$ and $x \notin C$ then $x \in A \setminus C$ and $x \in A \triangle C$. Thus $x \in (A \triangle C) \cup (B \triangle C)$. Therefore if $x \in (A \cup B) \triangle C$ then $ x \in (A \triangle C) \cup (B \triangle C)$ and since $x$ was arbitrary we can conclude $(A \cup B) \triangle C \subseteq (A \triangle C) \cup (B \triangle C)$.
+
+Case 4: $x \in C$, $x \notin A$, $x \notin B$. Since $x \in C$ and $x \notin A$ then $x \in C \setminus A$ and $x \in A \triangle C$. Since $x \in C$ and $x \notin B$ then $x \in C \setminus B$ and $x \in B \triangle C$. Thus $x \in (A \triangle C) \cup (B \triangle C)$. Therefore if $x \in (A \cup B) \triangle C$ then $x \in (A \triangle C) \cup (B \triangle C$ and since $x$ was arbitrary we can conclude $(A \cup B) \triangle C \subseteq (A \triangle C) \cup (B \triangle C)$.
+\end{proof}
+
+
+\subsection*{B}
+Find an example of sets $A$, $B$, and $C$ such that $( A \cup B ) \triangle C \neq (A \triangle C) \cup (B \triangle C)$ \\
+
+Let $A = \{1, 2\}$, $B = \{3, 4\}$ and $C = \{1, 5\}$. \\
+
+Then $A \triangle C = (A \setminus C) \cup (C \setminus A) = \{2\} \cup \{5\} = \{2, 5\}$. \\
+
+Now $B \triangle C = (B \setminus C) \cup (C \setminus B) = \{1, 3, 4, 5\} \cup \{1, 3, 4, 5\} = \{1, 3, 4, 5\}$. \\
+
+Therefore $(A \triangle C) \cup (B \triangle C) = \{2, 5\} \cup \{1, 3, 4, 5\} = \{1, 2, 3, 4, 5\}$. \\
+
+Now $(A \cup B) = \{1, 2\} \cup \{3, 4\} = \{1, 2, 3, 4\}$. \\
+
+Therefore $(A \cup B) \triangle C = ((A \cup B) \setminus C) \cup (C \setminus (A \cup B)) = \{2, 3, 4\} \cup \{5\} = \{2, 3, 4, 5\}$. \\
+
+Since $\{1, 2, 3, 4, 5\} \neq \{2, 3, 4, 5\}$ then $( A \cup B ) \triangle C \neq (A \triangle C) \cup (B \triangle C)$.
+
+
+\section*{3.5.24}
+Suppose $A$, $B$, and $C$ are sets.
+
+\subsection*{A} 
+
+\begin{theorem} $( A \triangle C) \cap (B \triangle C) \subseteq (A \cap B) \triangle C$.
+\end{theorem}
+
+\begin{proof}
+Let $x$ be arbitrary and suppose $x \in (A \triangle C) \cap (B \triangle C)$. Then we have two cases to consider:
+
+Case 1: $x \in A$, $x \in B$, and $x \notin C$. Since $x \in A$ and $x \in B$, then $x \in A \cap B$ and $x \notin C$. Therefore $ x \in (A \cap B) \setminus C$ and if $x \in (A \triangle C) \cap (B \triangle C)$ then $x \in (A \cap B) \triangle C$. Since $x$ was arbitrary we can conclude $(A \triangle C) \cap (B \triangle C) \subseteq (A \cap B) \triangle C$. 
+
+Case 2: $x \notin A$, $x \notin B$, $x \in C$. Since $x \notin A$ and $x \notin B$, then $x \notin A \cap B$ and since $x \in C$ then $x \in C \setminus (A \cap B)$. Therefore if $x \in (A \triangle C) \cap (B \triangle C)$ then $x \in (A \cap B) \triangle C$ and since $x$ was arbitrary we can conclude $(A \triangle C) \cap (B \triangle C) \subseteq (A \cap B) \triangle C$.
+\end{proof}
+
+\subsection*{B}
+\begin{theorem} $(A \cap B) \triangle C \subseteq (A \triangle C) \cap (B \triangle C)$
+\end{theorem}
+
+\begin{proof}
+Let $x$ be arbitrary and suppose $x \in (A \cap B) \triangle C$. Thus $x \in A \cap B \setminus C$ or $x \in C \setminus A \cap B$.
+
+Case 1: $x \in (A \cap B) \setminus C$. Thus $x \in A \cap B$ and $x \notin C$. Since $x \in A \cap B$ then $x \in A$ and $x \in B$. Since $x \in A$ and $x \notin C$ then $x \in A \setminus C$ and since $x \in B$ and $x \notin C$ then $x \in B \setminus C$. Therefore $x \in A \triangle C$ and $x \in B \triangle C$ and if $x \in (A \cap B) \setminus C$ then $x \in (A \triangle C) \cap (B \triangle C)$. Since $x$ was arbitrary we can conclude $(A \cap B) \triangle C \subseteq (A \triangle C) \cap (B \triangle C)$.
+
+Case 2: $x \in C \setminus (A \cap B)$. Thus $x \in C$ and $x \notin A \cap B$. Since $x \notin A \cap B$ then $x \notin A$ and $x \notin B$. Since $x \in A$ and $x \notin C$ then $x \in A \setminus C$. Also since $x \in B$ and $x \notin C$ then $x \in B \setminus B$. Therefore $x \in A \triangle C$ and $x \in B \triangle C$ and if $x \in C \setminus (A \cap B)$ then $x \in (A \triangle C) \cap (B \triangle C)$. Since $x$ was arbitrary then we can conclude $(A \cap B) \triangle C \subseteq (A \triangle C) \cap (B \triangle C)$.
+\end{proof}
+
 
 \end{document}
