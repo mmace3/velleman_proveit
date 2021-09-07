@@ -405,8 +405,16 @@ To show that $(A \setminus B) \triangle C$ is not a subset of $(A \triangle C) \
 We will show that $(A \triangle C) \setminus (B \triangle C) \subseteq (A \setminus B) \triangle C$.
 \begin{proof}
 Suppose $x$ is arbitrary and $x \in (A \triangle C) \setminus (B \triangle C)$, which means $x \in A \triangle C$ and $x \notin B \triangle C$. Consider the two cases, either $x \in A$, $x \notin B$, and $x \notin C$ or $x \notin A$, $x \in B$, and $x \in C$. If $x \in A$, $x \notin B$, and $x \notin C$, then $x \in A$ and $x \notin B$, thus $x \in A \setminus B$. Since $x \in A \setminus B$ and $x \notin C$ then $x \in (A \setminus B) \setminus C$ and therefore $x \in (A \setminus B) \triangle C$. If $x \notin A$, $x \in B$, and $x \in C$, then since $x \notin A$ and $x \in B$ then $x \notin A \setminus B$. Then since $x \in C$, we can conclude $x \in C \setminus (A \setminus B)$ and thus $x \in (A \setminus B) \triangle C$.
-
 \end{proof}
 
+\section*{3.5.26}
+No the proof is not correct because it proves that $0 < x$ or $x < 6$, but we need to show $0 < x$ and $x < 6$, or $0 < x < 6$. The theorem is correct and a proof is given below.
+
+\begin{theorem}  For every real number $x$, if $|x - 3| < 3$ then $0 < x < 6$.
+\end{theorem}
+
+\begin{proof}
+Suppose $|x-3| < 3$. Then $-3 < x - 3 < 3$ and adding 3 to both sides yields $0 < x < 6$. Therefore, if $|x - 3| < 3$ then $0 < x < 6$.
+\end{proof}
 
 \end{document}
