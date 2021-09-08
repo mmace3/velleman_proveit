@@ -423,5 +423,13 @@ Yes, the proof is correct. Some strategies used in the proof are: assume the ant
 \section*{3.5.28}
 Yes, the proof is correct. Some strategies used in the proof are: universal instantiation, existential instantiation, proof by cases.
 
+\section*{3.5.29}
+\begin{theorem} $\forall x P(x) \implies Q(x)$ then $\exists x (P(x) \implies Q(x))$.
+\end{theorem}
+
+\begin{proof}
+Suppose $\forall x (P(x) \implies Q(x))$, which is logically equivalent to $\forall x (\lnot P(x) \lor Q(x))$. Let $x$ be arbitrary and then either $\lnot P(x)$ or $Q(x)$. If $\lnot P(x)$ then we have found an $x$ such that $\lnot P(x)$. If $Q(x)$ then we have found an $x$ such that $Q(x)$. Thus we have found an $x$ such that $\lnot P(x)$ or $Q(x)$, which is logically equivalent to $P(x) \implies Q(x)$.
+
+\end{proof}
 
 \end{document}
