@@ -434,6 +434,13 @@ Suppose $\forall x (P(x) \implies Q(x))$, which is logically equivalent to $\for
 \section*{3.5.30}
 No the proof is not correct and it cannot be fixed because the theorem is not correct. Consider the counterexample where $A = \{1,2\}$, $B = \{1\}$, and $C = \{2\}$. Then $A \subseteq B \cup C$, but $A \not\subseteq B$ and $A \not\subseteq C$.
 
+\section*{3.5.31}
+Prove $\exists x (P(x) \implies \forall y P(y))$.
+
+\begin{proof}
+Suppose there exists an $x$ such that $P(x)$ or $\neg P(x)$. If $P(x)$ then it follows $\forall y P(y)$. If $\neg P(x)$, then $\forall y P(y)$ is vacuously true. Since the cases are exhaustive we can conclude that there exists an $x$ such that if $P(x)$ then $\forall y P(y)$.
+\end{proof}
+
 
 
 \end{document}
