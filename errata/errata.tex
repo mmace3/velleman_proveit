@@ -1,0 +1,55 @@
+\documentclass{article}
+
+%\documentclass{amsart}
+%\documentclass{scrartcl}
+%\usepackage{changepage}
+%\usepackage{scrextend}
+
+\usepackage{amssymb,amsmath,amsthm}
+% amssymb has empty set symbo
+\usepackage{scrextend} % for \begin{addmargin}[0.55cm]{0cm} text \end{margin}
+
+\usepackage{mathrsfs} % for \mathscr{P}
+\usepackage{float}
+
+
+\newcommand{\n}{ \noindent }
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\G}{\mathcal{G}}
+
+
+%\newcommand{\pwset}{\mathcal{P}}
+\newcommand{\pwset}{\mathscr{P}}
+
+
+\newtheorem*{theorem}{Theorem}  % This enables \begin{theorem}
+
+%\DeclareFontFamily{U}{MnSymbolC}{}
+%\DeclareSymbolFont{MnSyC}{U}{MnSymbolC}{m}{n}
+%\DeclareFontShape{U}{MnSymbolC}{m}{n}{
+%  <-6>    MnSymbolC5
+%  <6-7>   MnSymbolC6
+%  <7-8>   MnSymbolC7
+%  <8-9>   MnSymbolC8
+%  <9-10>  MnSymbolC9
+%  <10-12> MnSymbolC10
+%  <12->   MnSymbolC12%
+%}{}
+%\DeclareMathSymbol{\powerset}{\mathord}{MnSyC}{180}
+
+%\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\begin{document}
+\section*{Errata}
+
+Below are possible mistakes I have identified in the book How to Prove It (2nd edition), by Daniel J. Velleman. 
+
+
+\begin{description}
+\item p 193 - line 12 - the word "get" should be "set"
+
+\item p 253 - exercise 13 (d) - I think $\forall b \in B(g(b) \in h(b))$ should be $\forall b \in B(g(b) \in h^{-1}(b))$ because $h$ is a function from from $A/R$ to $B$ and therefore $b$ is not in the domain of $h$ but $b$ is in the domain of $h^{-1}$. I also was not able to complete the exercise unless the $h$ was changed to $h^{-1}$.
+\end{description}
+
+
+\end{document}
