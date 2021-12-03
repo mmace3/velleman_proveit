@@ -1,0 +1,65 @@
+\documentclass{article}
+
+%\documentclass{amsart}
+%\documentclass{scrartcl}
+%\usepackage{changepage}
+%\usepackage{scrextend}
+
+\usepackage{amssymb,amsmath,amsthm}
+% amssymb has empty set symbo
+\usepackage{scrextend} % for \begin{addmargin}[0.55cm]{0cm} text \end{margin}
+
+\usepackage{mathrsfs} % for \mathscr{P}
+\usepackage{float}
+
+
+\newcommand{\n}{ \noindent }
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\G}{\mathcal{G}}
+
+
+%\newcommand{\pwset}{\mathcal{P}}
+\newcommand{\pwset}{\mathscr{P}}
+
+
+\newtheorem*{theorem}{Theorem}  % This enables \begin{theorem}
+
+%\DeclareFontFamily{U}{MnSymbolC}{}
+%\DeclareSymbolFont{MnSyC}{U}{MnSymbolC}{m}{n}
+%\DeclareFontShape{U}{MnSymbolC}{m}{n}{
+%  <-6>    MnSymbolC5
+%  <6-7>   MnSymbolC6
+%  <7-8>   MnSymbolC7
+%  <8-9>   MnSymbolC8
+%  <9-10>  MnSymbolC9
+%  <10-12> MnSymbolC10
+%  <12->   MnSymbolC12%
+%}{}
+%\DeclareMathSymbol{\powerset}{\mathord}{MnSyC}{180}
+
+%\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\begin{document}
+
+\section*{3.6.2}
+\begin{theorem} There is a unique $x \in \mathbb{R}$ such that for all $y \in \mathbb{R}$, $xy + x - 4 = 4y$.
+\end{theorem}
+\begin{proof}
+First we prove existence. Let $x = 4$ and suppose $y$ is an arbitrary real number. Then we have $4y + 4 - 4 = 4y + 0 = 4y$, as desired. To prove uniqueness suppose $a$ and $b$ are arbitrary real numbers and that $ay + a - 4 = 4y$ and that $by + b - 4 = 4b$. For $ay + a - 4 = 4y$, let $y = b$ and we have $ab + a - 4 = 4b$. For $by + b - 4 = 4y$, let $y = a$ and we have $ba + b - 4 = 4a$. Now subtracting both sides of $ab + a - 4 = 4b$ from $ba + b - 4 = 4a$ we have
+
+\begin{align*}
+ba + b - 4 - (ab + a - 4) &= 4a - 4b \\
+ba + b - 4 - ab - a + 4 &= 4a - 4b \\
+b - a &= 4a - 4b \\
+b + 4b &= 4a + a \\
+5b &= 5a \\
+b &= a
+\end{align*}
+
+Therefore, if $ay + a - 4 = 4y$ and $by + b - 4 = 4y$, then $a = b$.
+
+\end{proof}
+
+
+
+\end{document}
