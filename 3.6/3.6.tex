@@ -60,6 +60,19 @@ Therefore, if $ay + a - 4 = 4y$ and $by + b - 4 = 4y$, then $a = b$.
 
 \end{proof}
 
+\section*{3.6.3}
+\begin{theorem} $\forall x \in \mathbb{R} [ (x \neq 0 \land x \neq 1) \implies \exists! y \in \mathbb{R} (y/x = y - x) ]$
+\end{theorem}
+\begin{proof}
+Suppose $x$ is an arbitrary real number, $x \neq 0$, and $x \neq 1$. Let $y = x^2/(x-1)$, which is defined because $x \neq 1$. Then
 
+\begin{align*}
+\frac{y}{x} = \frac{\frac{x^2}{x-1}}{x} = \frac{x^2}{x-1} \cdot \frac{1}{x} = \frac{x^2}{x(x-1)} &= \frac{x}{x-1} \\
+&= \frac{x^2 - x^2 + x}{x-1} \\
+&= \frac{x^2 - x(x-1)}{x-1} \\
+& = \frac{x^2}{x-1} - \frac{x(x-1)}{x-1} = \frac{x^2}{x-1} - x = y - x
+\end{align*}
+
+\end{proof}
 
 \end{document}
