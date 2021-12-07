@@ -82,6 +82,15 @@ Suppose $x$ is an arbitrary real number, $x \neq 0$, and $x \neq 1$. Let $y = x^
 Let $x$ be an arbitrary real number. To prove existence, suppose $x \neq 0$ and $y = 1/x$. Then $zy = z(1/x) = z/x$. To prove uniqueness let $a$ and $b$ be arbitrary real numbers and suppose $za = z/x$ and $zb = z/x$. For $za = z/x$ let $z = b$ and we have $ba = bx$, which can be rearranged as $xba = b$. For $zb = z/x$ let $z = a$ and we have $ab = a/x$, which can be rearranged as $xab = a$. Subtracting both sides of $xab = b$ from $xab = a$ we have $xab - xab = a - b$ and so $a - b = 0$ or $a = b$.
 \end{proof}
 
+\section*{3.6.5}
+If $\F$ is a family of sets, then $\cup \F = \{x | \exists A(A \in \F \land x \in A) \}$. Define a new set $\cup!\F$ by the formula $\cup ! \F = \{x | \exists! A (A \in \F \land x \in A )\}$.
+
+\subsection*{a)}
+\begin{theorem} $\forall \F (\cup ! \F \subseteq \cup F)$
+\end{theorem}
+\begin{proof}
+Suppose $\F$ is and arbitrary family of sets. Let $x$ be arbitrary and suppose $x \in \cup! \F$. This means $\exists! A \in \F (x \in A)$. Since $A \in \F$ and $x \in A$ then we can concluded that $x \in \cup \F$. Since $x$ was arbitrary then $\cup ! \F \subseteq \cup \F$, and since $\F$ was arbitrary we can conclude for all $\F$, $\cup ! \F \subseteq \cup \F$.
+\end{proof}
 
 
 \end{document}
