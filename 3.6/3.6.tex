@@ -111,5 +111,17 @@ To see that $\cup \F \subseteq \cup! \F$, now suppose $y \in \cup \F$. Then ther
 We have shown that $\cup! \F \subseteq \cup F$ and $\cup \F \subseteq \cup ! \F$ and therefore $\cup! \F = \cup \F$.
 \end{proof}
 
+\section*{3.6.6}
+Let $U$ be any set.
+
+\subsection*{(a)}
+\begin{theorem} There is a unique $A \in \pwset(U)$ such that for every $B \in \pwset(U), A \cup B = B$.
+\end{theorem}
+
+\begin{proof}
+First we prove existence. Let $A = \varnothing$. Let $B$ be arbitrary and suppose $B \in \pwset(U)$. To see that $A \cup B \subseteq B$, let $x$ be arbitrary and suppose $x \in A \cup B$. Since $A = \varnothing$ then $x \notin A$ and therefore it must be that $x \in B$. Since $x$ was arbitrary then $A \cup B \subseteq B$. Now to see that $B \subseteq A \cup B$, suppose $x \in B$. It follows that $x \in A \cup B$ and therefore $B \subseteq A \cup B$. Since $A \cup B \subseteq B$ and $B \subseteq A \cup B$, then $A \cup B = B$. Since $B$ was arbitrary this shows that there exists an $A \in \pwset(U)$ such that for every $B \in \pwset(U), A \cup B = B$.
+
+Too prove that $A$ is unique, suppose $C$ is arbitrary and for all $B \in \pwset(U)$, $C \cup B = B$. In particular, let $B = \varnothing$, then $C \cup \varnothing = \varnothing$. But we also have that $C \cup \varnothing = C$ and therefore $C = \varnothing = A$. 
+\end{proof}
 
 \end{document}
