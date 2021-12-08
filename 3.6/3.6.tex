@@ -85,11 +85,30 @@ Let $x$ be an arbitrary real number. To prove existence, suppose $x \neq 0$ and 
 \section*{3.6.5}
 If $\F$ is a family of sets, then $\cup \F = \{x | \exists A(A \in \F \land x \in A) \}$. Define a new set $\cup!\F$ by the formula $\cup ! \F = \{x | \exists! A (A \in \F \land x \in A )\}$.
 
-\subsection*{a)}
+\subsection*{(a)}
 \begin{theorem} $\forall \F (\cup ! \F \subseteq \cup F)$
 \end{theorem}
 \begin{proof}
 Suppose $\F$ is and arbitrary family of sets. Let $x$ be arbitrary and suppose $x \in \cup! \F$. This means $\exists! A \in \F (x \in A)$. Since $A \in \F$ and $x \in A$ then we can concluded that $x \in \cup \F$. Since $x$ was arbitrary then $\cup ! \F \subseteq \cup \F$, and since $\F$ was arbitrary we can conclude for all $\F$, $\cup ! \F \subseteq \cup \F$.
+\end{proof}
+
+\subsection*{(b)}
+\begin{theorem} $\forall \F (\cup! \F = \cup \F ~\text{iff}~ \F ~ \text{is pairwise disjoint})$. 
+\end{theorem}
+
+\begin{flushleft} Note that pairwise disjoint means that $\forall A \in \F \forall B \in \F (A \neq B \implies A \cap B = \varnothing)$.
+\end{flushleft}
+
+\begin{proof} Let $\F$ be an arbitrary family of sets. \\
+$(\rightarrow)$ Suppose $\cup! \F = \cup \F$. We will prove the contrapositive. Let $A$ and $B$ be arbitrary, suppose $A \in \F$, $B \in \F$, and $A$ and $B$ are not disjoint. Then there is an element $x$ such that $x \in A \cap B$. Since $A \in \F$ and $B \in \F$ then $x \in \cup \F$ and it follows by assumption that $x \in \cup! \F$. Since $x \in \cup! \F$ then there is a unique set $X \in \F$ such that $x \in X$ and so $x \in A = X$ and $x \in B = X$. Therefore $A = B$.
+
+$(\leftarrow)$ Now suppose that $\F$ is pairwise disjoint. We need to show that $\cup! \F = \cup \F$, which means $\cup! \F \subseteq \cup F$ and $\cup \F \subseteq \cup ! \F$. 
+
+To see that $\cup! \F \subseteq \cup \F$, let $y$ be arbitrary and suppose $y \in \cup! \F$. Then there is a unique set $Y \in \F$ such that $y \in Y$ and therefore $y \in \cup \F$. Since $y$ was arbitrary, this shows that $\cup! \F \subseteq \cup \F$.
+
+To see that $\cup \F \subseteq \cup! \F$, now suppose $y \in \cup \F$. Then there is a set $Y \in \F$ such that $y \in Y$. To see that $Y$ is unique, suppose there is another set $Z \in \F$ such that $y \in Z$. By assumption, $\F$ is pairwise disjoint and since $y \in Y$ and $y \in Z$, it follows that $Y = Z$. Thus there is a unique set $Y \in \F$ such that $y in Y$ and therefore $y \in \cup! \F$. Since $y$ was arbitrary this shows that $\cup \F \subseteq \cup! \F$.
+
+We have shown that $\cup! \F \subseteq \cup F$ and $\cup \F \subseteq \cup ! \F$ and therefore $\cup! \F = \cup \F$.
 \end{proof}
 
 
